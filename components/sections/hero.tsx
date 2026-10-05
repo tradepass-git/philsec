@@ -72,9 +72,9 @@ const hero = () => {
                                     setModalTitle("Sponsor Enquiry");
                                     setOpen(true);
                                 }} className={`${CustomClass.ctaButton}`}>
-                                    
+
                                     <span><span>REGISTER FOR 2027</span><span>REGISTER FOR 2027</span></span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" /></svg>
                                 </a>
 
                             </div>
@@ -88,7 +88,7 @@ const hero = () => {
                     </div>
                 </div>
                 <div className="glance-section relative overflow-hidden h-[38vh]">
-                    <div className="mx-auto w-full min-[1600px]:w-[90%] min-[1800px]:w-[80%] min-[2200px]:w-[75%] relative z-10 py-[20px] px-[20px] border border-[#3f3f3f87] rounded-3xl">
+                    <div className="mx-auto w-[90%] min-[1800px]:w-[80%] min-[2200px]:w-[75%] relative z-10 py-[20px] px-[20px] border border-[#3f3f3f87] rounded-3xl">
                         <div className="grid grid-cols-12 justify-items-center gap-y-[20px]">
                             <div className="xl:col-span-1 col-span-12 flex items-center pl-[40px]">
                                 <div className="text-[clamp(1rem,4vw,1.5rem)] hidden xl:block font-bold uppercase text-white tracking-[0.01rem] leading-[1.2]">
@@ -104,7 +104,7 @@ const hero = () => {
                                             <div
                                                 className="font-zuume text-[clamp(4.4rem,6vw,4.4rem)] lg:text-[clamp(2rem,4vw,4.4rem)] justify-center xl:justify-start font-semibold uppercase text-[var(--secondary-color)] tracking-[0.01rem] leading-[1] flex items-center gap-[5px]">
                                                 {fact.number}<span className="text-[clamp(1.5rem,4vw,2rem)] font-bold">{fact.sing}</span></div>
-                                            <p className="text-[0.9rem] pb-[20px] sm:pb-0 font-medium text-white tracking-wide leading-[1.4] text-center xl:text-left" dangerouslySetInnerHTML={{ __html: fact.text }}></p>
+                                            <p className="text-[0.7rem] 2xl:text-[0.9rem] pb-[20px] sm:pb-0 font-medium text-white tracking-wide leading-[1.4] text-center xl:text-left" dangerouslySetInnerHTML={{ __html: fact.text }}></p>
                                         </div>
                                     ))}
                                 </div>

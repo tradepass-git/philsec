@@ -1,0 +1,35 @@
+.single-topic {
+  border: 1px dashed rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  padding: 15px;
+  backdrop-filter: blur(4.8000001907px);
+  background: rgba(74, 33, 239, 0.18);
+}
+
+.single-topic::before {
+  content: '';
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  padding: 1px;
+  padding-top: 0;
+  position: absolute;
+  border-radius: 0 0 20px 20px;
+  height: 50%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: add, add;
+  mask-composite: add, add;
+  -webkit-mask-composite: source-out;
+  mask-composite: exclude;
+  background: linear-gradient(180deg, #4f3bf0 0%, #2dd98f 100%);
+}
+
+.single-topic::after {
+  content: '';
+  right: -29px;
+  top: 50%;
+  position: absolute;
+  height: 2px;
+  width: 28px;
+  background: linear-gradient(90deg, #4c2cef 13.38%, #2dd98f 48.09%, #4c2bef 80%);
+}

@@ -1,6 +1,7 @@
 @import url("https://use.typekit.net/ygo7fqb.css");
 @import "tailwindcss";
 @import "../public/css/header.css";
+@import "../public/css/style.css";
 
 @theme {
   --font-montserrat: "Montserrat", sans-serif;

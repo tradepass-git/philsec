@@ -6,6 +6,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 //import GSAPAnimations from "@/components/GSAPAnimations";
 import localFont from "next/font/local";
 
+import "@/public/css/icomoon.css";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
