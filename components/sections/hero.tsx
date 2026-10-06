@@ -104,7 +104,7 @@ const hero = () => {
                                             <div
                                                 className="font-zuume text-[clamp(4.4rem,6vw,4.4rem)] lg:text-[clamp(2rem,4vw,4.4rem)] justify-center xl:justify-start font-semibold uppercase text-[var(--secondary-color)] tracking-[0.01rem] leading-[1] flex items-center gap-[5px]">
                                                 {fact.number}<span className="text-[clamp(1.5rem,4vw,2rem)] font-bold">{fact.sing}</span></div>
-                                            <p className="text-[0.7rem] 2xl:text-[0.9rem] pb-[20px] sm:pb-0 font-medium text-white tracking-wide leading-[1.4] text-center xl:text-left" dangerouslySetInnerHTML={{ __html: fact.text }}></p>
+                                            <p className="text-[0.7rem] min-[1400px]:text-[0.8rem] min-[1600px]:text-[0.9rem] pb-[20px] sm:pb-0 font-medium text-white tracking-wide leading-[1.4] text-center xl:text-left" dangerouslySetInnerHTML={{ __html: fact.text }}></p>
                                         </div>
                                     ))}
                                 </div>

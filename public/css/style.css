@@ -33,3 +33,149 @@
   width: 28px;
   background: linear-gradient(90deg, #4c2cef 13.38%, #2dd98f 48.09%, #4c2bef 80%);
 }
+
+.bg-style6 {
+  background: linear-gradient(#180b4c 50%, #180b4c00 90%), linear-gradient(90deg, #2472fc, #2472fc99 45%, #8711c199 55%, #8711c1);
+}
+
+/*
+.effectFade {
+  opacity: 0;
+}
+
+.slick-slide,
+.slick-track,
+.flip-image,
+.element,
+.textFadeUp,
+.textFadeUp2,
+.textFadeUp3,
+.scroll-fadeZoom,
+.effectFade,
+.animate-box,
+.image-2,
+.overflow-hidden>* {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.wg-work {
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.0509803922) inset;
+
+}
+
+.wg-work .work-image img,
+.wg-work .work-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 350px;
+}
+
+
+.wg-work .work-image::before {
+  content: "";
+  z-index: 1;
+  background: #00000049;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wg-work .work-image::after {
+  content: "";
+  background: linear-gradient(360deg, #000 0%, #0000004d 40%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wg-work .work-content {
+  position: absolute;
+  inset: 0;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.wg-work .work_top,
+.wg-work .work_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wg-work .work_bottom {
+  align-items: end;
+}
+
+.scroller-wrapper {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroller-wrapper .scroller {
+  display: block;
+  white-space: nowrap;
+}
+
+
+.scroller-wrapper .scroller .slide {
+  display: inline-flex;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@media (min-width: 1200px) {
+  .wg-work .work-content {
+    padding: 32px;
+  }
+
+  .wg-work .work-content .tf-list {
+    gap: 16px;
+  }
+}
+  */
+/*
+.why-choose-us {
+  background-color: #fff;
+  background-image: radial-gradient(at 0% 0%, #fff 0rem, transparent 50%),
+    radial-gradient(at 0% 0%, #9cdcaa26 0rem, transparent 50%),
+    radial-gradient(at 81% 57%, #96caf740 0rem, transparent 50%),
+    radial-gradient(at 29% 31%, #bfb2f326 0rem, transparent 50%),
+    radial-gradient(at 97% 45%, #f8a3a84d 0rem, transparent 50%),
+    radial-gradient(at 60% 80%, #f8a3a859 0rem, transparent 50%),
+    linear-gradient(90deg, #e5e1ab33, #96caf733, #00000000 50%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: fixed;
+}
+*/
+.cs-iconbox::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--main-color);
+  transition: all 0.3s ease-out 0s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.cs-iconbox:hover::after {
+  width: 100%;
+}

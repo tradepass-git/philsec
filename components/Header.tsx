@@ -324,7 +324,7 @@ const Header = () => {
                 ================================================= */}
 
                 <div
-                    className={`relative pt-[15px] pb-[10px] px-[7.5px] min-[1400px]:py-[16px] min-[1400px]:px-[31px] flex justify-between  border-b border-[rgba(25,25,26,0.3)] backdrop-blur-[4px] fixed-top ${menuOpen ? "bg-[rgb(0,0,0)]" : "bg-[rgba(0,0,0)]"}`}
+                    className={`relative pt-[15px] pb-[10px] px-[7.5px] min-[1400px]:py-[16px]  min-[1400px]:px-[31px] flex justify-between  border-b border-[rgba(25,25,26,0.3)] backdrop-blur-[4px] fixed-top ${menuOpen ? "bg-[rgb(0,0,0)]" : "bg-[rgba(0,0,0)]"}`}
                 >
                     {/* =================================================
                         LOGO
@@ -387,7 +387,7 @@ const Header = () => {
                                                                 closeMenu?.();
                                                             }
                                                         }}
-                                                        className="text-[12px] min-[1400px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                        className="text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
 
 
                                                     >
@@ -401,7 +401,7 @@ const Header = () => {
 
                                                         <button
                                                             type="button"
-                                                            className="flex items-center gap-1 text-[12px] min-[1400px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                            className="flex items-center gap-1 text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
                                                         >
                                                             {group.category}
 
@@ -462,7 +462,7 @@ const Header = () => {
                                                                                         href={
                                                                                             item.href
                                                                                         }
-                                                                                        className="flex items-center justify-between gap-4 text-[12px] min-[1400px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                        className="flex items-center justify-between gap-4 text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
                                                                                     >
                                                                                         {
                                                                                             item.name
@@ -477,7 +477,7 @@ const Header = () => {
                                                                                 ) : (
                                                                                     <button
                                                                                         type="button"
-                                                                                        className="w-full flex items-center justify-between gap-4 text-left text-[12px] min-[1400px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                        className="w-full flex items-center justify-between gap-4 text-left text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
                                                                                     >
                                                                                         {
                                                                                             item.name
@@ -513,7 +513,7 @@ const Header = () => {
                                                                                                                 href={
                                                                                                                     subItem.href
                                                                                                                 }
-                                                                                                                className="block text-[12px] min-[1400px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                                                className="block text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
                                                                                                             >
                                                                                                                 {
                                                                                                                     subItem.name
@@ -524,7 +524,7 @@ const Header = () => {
                                                                                                                 className="
                                                                                                                     block
                                                                                                                     text-[12px]
-                                                                                                                    min-[1400px]:text-[16px]
+                                                                                                                    min-[1600px]:text-[16px]
                                                                                                                     font-bold
                                                                                                                     uppercase
                                                                                                                 "

@@ -7,6 +7,8 @@ import PowerHouse from "@/components/sections/PowerHouse";
 import KeyStatistics from "@/components/sections/KeyStatistics";
 import Industry from "@/components/sections/Industry";
 import Topics from "@/components/sections/Topics";
+import Happenings from "@/components/sections/Happenings-2";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 export default function Home() {
   return (
     <main>
@@ -18,6 +20,8 @@ export default function Home() {
       <KeyStatistics />
       <Industry />
       <Topics />
+      <Happenings />
+      <WhyChooseUs />
     </main>
   );
 }
