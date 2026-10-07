@@ -78,7 +78,7 @@ const topics = [
 
 const Industry = () => {
     return (
-        <section className="topics-section relative overflow-hidden py-[100px]">
+        <section className="topics-section relative overflow-hidden py-[100px] bg-[url('/images/industry-bg.jpg')] bg-cover bg-center bg-no-repeat">
             <div className="max-w-7xl mx-auto w-full relative z-10 items-center px-[10px]">
                 <div className="flex flex-col items-center gap-[80px]">
                     <div className="heading flex flex-col items-center gap-[40px]">
@@ -89,7 +89,7 @@ const Industry = () => {
                     </div>
                     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-[20] gap-y-[20] w-full'>
                         {topics.map((topic, i) => (
-                            <div key={i} className="group relative flex flex-col gap-[40] justify-center items-center rounded-xl border border-[#2472fc] transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-[var(--secondary-color)] cursor-pointer">
+                            <div key={i} className="group relative flex flex-col gap-[40] justify-center items-center rounded-xl border border-[#ffffff6b] transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-[var(--secondary-color)] cursor-pointer">
                                 <div className='w-full flex flex-col gap-[14px] justify-center items-center text-center min-h-[150px]'>
                                     <div className="relative w-[42px] h-[42px]">
                                         <Image

@@ -179,3 +179,93 @@
 .cs-iconbox:hover::after {
   width: 100%;
 }
+
+.cs-iconbox-inner {
+  background: radial-gradient(114.79% 100.05% at 50.04% -0.05%, rgba(0, 0, 0, 0.8) 60%, #7f3e08 85%, #fd7c0f 95%, #ffd900 100%);
+
+}
+
+.kp-glass-border.animate-border {
+  position: absolute;
+  inset: 0;
+
+  padding: 1px;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  background: transparent;
+
+  border-radius: inherit;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  z-index: 1;
+}
+
+/* Rotating light */
+.kp-glass-border.animate-border::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 300%;
+  aspect-ratio: 1 / 1;
+
+  transform: translate(-50%, -50%);
+
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      rgba(255, 255, 255, 0.09) 80deg,
+      rgba(255, 255, 255, 0.45) 120deg,
+      rgba(255, 255, 255, 0.09) 160deg,
+      transparent 220deg,
+      rgba(255, 255, 255, 0.45) 280deg,
+      rgba(255, 255, 255, 0.09) 320deg,
+      transparent 360deg);
+
+  animation: kp-glass-border-spin 4s linear infinite;
+
+  will-change: transform;
+
+  pointer-events: none;
+}
+
+/* Optional inner glass overlay */
+.kp-glass-border.animate-border::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+/* Animation */
+@keyframes kp-glass-border-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

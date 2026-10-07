@@ -19,8 +19,8 @@ export default function Home() {
       <WhyPhilippines />
       <KeyStatistics />
       <Industry />
-      <Topics />
       <Happenings />
+      <Topics />
       <WhyChooseUs />
     </main>
   );
