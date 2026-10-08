@@ -269,3 +269,19 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+.kp-grid {
+    -moz-column-gap: var(--kp-grid-col-gap);
+    column-gap: var(--kp-grid-col-gap);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.kp-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--kp-container-max);
+    padding-left: var(--kp-container-px);
+    padding-right: var(--kp-container-px);
+    width: 100%;
+}

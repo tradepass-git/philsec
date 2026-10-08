@@ -19,6 +19,10 @@
   --animation-elastic-css: 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
   --top-bar-gradient: linear-gradient(90deg, var(--secondary-color), var(--main-color));
   --overview-bg: #181819;
+
+  --kp-container-max: 1680px;
+  --kp-container-px: 2.5rem;
+  --kp-grid-col-gap: 1.25rem;
 }
 
 .font-zuume {
