@@ -47,7 +47,7 @@ const defaultConfig: NeatConfig = {
     shadows: 2,
     highlights: 3,
     colorBrightness: 0.5,
-    colorSaturation: -2,
+    colorSaturation: -1,
     wireframe: false,
     antialias: false,
     colorBlending: 7,
