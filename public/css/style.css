@@ -185,7 +185,7 @@
 
 }
 
-.kp-glass-border.animate-border {
+.tp-glass-border.animate-border {
   position: absolute;
   inset: 0;
 
@@ -213,7 +213,7 @@
 }
 
 /* Rotating light */
-.kp-glass-border.animate-border::before {
+.tp-glass-border.animate-border::before {
   content: "";
 
   position: absolute;
@@ -236,7 +236,7 @@
       rgba(255, 255, 255, 0.09) 320deg,
       transparent 360deg);
 
-  animation: kp-glass-border-spin 4s linear infinite;
+  animation: tp-glass-border-spin 4s linear infinite;
 
   will-change: transform;
 
@@ -244,7 +244,7 @@
 }
 
 /* Optional inner glass overlay */
-.kp-glass-border.animate-border::after {
+.tp-glass-border.animate-border::after {
   content: "";
 
   position: absolute;
@@ -260,7 +260,7 @@
 }
 
 /* Animation */
-@keyframes kp-glass-border-spin {
+@keyframes tp-glass-border-spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
@@ -270,18 +270,18 @@
   }
 }
 
-.kp-grid {
-    -moz-column-gap: var(--kp-grid-col-gap);
-    column-gap: var(--kp-grid-col-gap);
+.tp-grid {
+    -moz-column-gap: var(--tp-grid-col-gap);
+    column-gap: var(--tp-grid-col-gap);
     display: grid;
     grid-template-columns: repeat(16, 1fr);
 }
 
-.kp-container {
+.tp-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--kp-container-max);
-    padding-left: var(--kp-container-px);
-    padding-right: var(--kp-container-px);
+    max-width: var(--tp-container-max);
+    padding-left: var(--tp-container-px);
+    padding-right: var(--tp-container-px);
     width: 100%;
 }

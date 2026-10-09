@@ -26,12 +26,12 @@ const KeyStatistics = () => {
     });
   }, []);
   return (
-    <section className="bg-style8 attendees-section relative overflow-hidden py-[80px]">
+    <section className="attendees-section relative overflow-hidden py-[80px]" data-gradient-section="default">
       <div className="w-full relative z-10 items-center px-[10px] md:px-[30px] lg:px-[60px] min-[1800px]:!px-[10%] min-[2000px]:!px-[15%]">
         <div className="flex flex-col items-center gap-[60px]">
           <div className="max-w-4xl mx-auto w-full heading flex flex-col items-center text-center gap-[40px]">
             <div className="flex flex-col gap-[20px]">
-              <h2 className="font-oswald text-center text-[clamp(1.2rem,4vw,2.53rem)] font-bold uppercase leading-[1.2]  text-black">
+              <h2 className="font-oswald text-center text-[clamp(1.2rem,4vw,2.53rem)] font-bold uppercase leading-[1.2]  text-white">
                 Key Statistics From 2025
               </h2>
             </div>

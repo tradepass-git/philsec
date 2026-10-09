@@ -38,7 +38,7 @@ const topics = [
 
 const Topics = () => {
     return (
-        <section className="topics-section relative overflow-hidden h-screen flex flex-col justify-center items-center">
+        <section className="topics-section relative overflow-hidden flex flex-col justify-center items-center py-[100px]" data-gradient-section="default">
             <div className="max-w-7xl mx-auto w-full relative z-10 items-center px-[10px]">
                 <div className="flex flex-col items-center gap-[80px]">
                     <div className="heading flex flex-col items-center gap-[40px]">

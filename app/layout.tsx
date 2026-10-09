@@ -12,6 +12,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+/* SectionGradients */
+import SectionGradients from "@/components/ui/SectionGradients";
+
+import NeatGradientBackground from "@/components/ui/NeatGradientBackground";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -61,6 +66,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
 
+        <SectionGradients />
+
+
         {/* --------------------------------------------------
             Smooth Scroll
         -------------------------------------------------- */}
@@ -86,6 +94,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           >
             <Header />
 
+            
             {children}
 
             {/* --------------------------------------------------

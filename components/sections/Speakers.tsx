@@ -11,7 +11,7 @@ import CustomClass from "@/public/css/CustomClass.module.css";
 const Speakers = () => {
     const swiperRef = useRef<any>(null);
     return (
-        <section className="speakers-section relative pb-[80px]">
+        <section className="speakers-section relative pb-[80px] bg-black">
             <div className={CustomClass.devLine}><svg viewBox="0 0 1728 1101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-43 773.821C160.86 662.526 451.312 637.01 610.111 733.104C768.91 829.197 932.595 1062.9 602.782 1098.75C272.969 1134.6 676.888 25.4306 1852 1"></path></svg></div>
             <div className="max-w-7xl mx-auto w-full relative z-10">
                 <div className='flex flex-col gap-[80px]'>

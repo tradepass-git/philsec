@@ -32,7 +32,7 @@ const slides = [
 
 const Happenings = () => {
     return (
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden" data-gradient-section="default">
             <div className="mx-auto w-full max-w-7xl">
                 <div id="sectionPin" className="relative overflow-hidden rounded-3xl border-0 border-[#ffffff6b]">
                     <HorizontalScroll />

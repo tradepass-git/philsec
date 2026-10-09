@@ -60,27 +60,27 @@ const Happenings4 = () => {
                             Math.abs(
                                 ((normalizedAngle + 180) %
                                     360) -
-                                    180
+                                180
                             );
 
                         const scale =
                             0.68 +
                             (1 -
                                 distanceFromCenter / 180) *
-                                0.29;
+                            0.29;
 
                         const opacity =
                             0.43 +
                             (1 -
                                 distanceFromCenter / 180) *
-                                0.57;
+                            0.57;
 
                         const zIndex = Math.round(
                             55 +
-                                (1 -
-                                    distanceFromCenter /
-                                        180) *
-                                    45
+                            (1 -
+                                distanceFromCenter /
+                                180) *
+                            45
                         );
 
                         gsap.set(element, {
@@ -89,12 +89,12 @@ const Happenings4 = () => {
                                 translate(43.125rem)
                                 rotate(${-angle}deg)
                                 scale(${Math.max(
-                                    0.68,
-                                    Math.min(
-                                        0.97,
-                                        scale
-                                    )
-                                )})
+                                0.68,
+                                Math.min(
+                                    0.97,
+                                    scale
+                                )
+                            )})
                             `,
                             opacity: Math.max(
                                 0.43,
@@ -198,11 +198,11 @@ const Happenings4 = () => {
 
                     if (progressBorder) {
                         gsap.set(progressBorder, {
-                            strokeDasharray: 165.2,
+                            strokeDasharray: 0,
                             strokeDashoffset:
                                 isActive
                                     ? 0
-                                    : 165.2,
+                                    : 0,
                         });
                     }
                 });
@@ -223,7 +223,7 @@ const Happenings4 = () => {
                             gsap.set(dot, {
                                 backgroundColor:
                                     index ===
-                                    activeIndex
+                                        activeIndex
                                         ? "#fff"
                                         : "#D9D9D9",
                             });
@@ -311,17 +311,16 @@ const Happenings4 = () => {
     return (
         <section
             ref={sectionRef}
-            className="kp-home-capabilities relative w-full h-screen overflow-hidden"
-        >
-            <div className="kp-grid kp-container h-full">
-                <div className="col-[1/-1] ms-[-2rem] h-full flex kp-home-capabilities-inner relative overflow-visible">
-                    <div className="flex-none flex flex-row gap-[20.5rem] kp-home-capabilities-content will-change-transform">
+            className="tp-home-capabilities relative w-full h-screen overflow-hidden" data-gradient-section="default">
+            <div className="tp-grid tp-container h-full">
+                <div className="col-[1/-1] ms-[-2rem] h-full flex tp-home-capabilities-inner relative overflow-visible">
+                    <div className="flex-none flex flex-row gap-[20.5rem] tp-home-capabilities-content will-change-transform">
                         {/* =====================================================
                             LEFT / ORBIT SECTION
                         ===================================================== */}
 
-                        <section className="relative home-testimonial-kp home-testimonial-capabilities-kp h-screen w-screen flex-none opacity-100">
-                            <div className="kp-grid h-full kp-container max-lg:!px-0">
+                        <section className="relative home-testimonial-tp home-testimonial-capabilities-tp h-screen w-screen flex-none opacity-100">
+                            <div className="tp-grid h-full tp-container max-lg:!px-0">
 
                                 {/* =================================================
                                     ORBIT
@@ -330,7 +329,7 @@ const Happenings4 = () => {
                                 <div className="relative col-[1/2] lg:flex hidden h-screen items-center justify-center">
 
                                     {/* OUTER CIRCLE */}
-                                    <div className="absolute w-[48.25rem] h-[48.25rem] flex justify-center items-center">
+                                    <div className="absolute w-[40.25rem] h-[40.25rem] 2xl:w-[48.25rem] 2xl:h-[48.25rem] flex justify-center items-center">
 
                                         <div className="absolute inset-0 border-[0.125rem] rounded-full border-[#E2E2E21A]" />
 
@@ -450,12 +449,18 @@ const Happenings4 = () => {
                                                     image-rotate
                                                     absolute
                                                     top-1/2
-                                                    left-1/2
+                                                    left-1/4
+                                                    min-[1400px]:left-1/3
+                                                    min-[1600px]:left-1/2
                                                     -translate-x-1/2
-                                                    -translate-y-1/2
+                                                    -translate-y-1/4
+                                                    min-[1400px]:-translate-y-1/3
+                                                    min-[1600px]:-translate-y-1/2
                                                     pointer-events-none
                                                     w-[23.5rem]
-                                                    h-[65vh]
+                                                    h-[55vh]
+                                                    min-[1400px]:h-[60vh]
+                                                    min-[1600px]:h-[65vh]
                                                     min-[1800px]:h-[50vh]
                                                     flex
                                                     items-center
@@ -649,16 +654,12 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
                                                         Conference
                                                     </h3>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
+                                                    <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
-                                                    </p>
-
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
-                                                        It showcases thought leadership and cutting-edge knowledge for the growth of the entire business community. A perfect platform that projects the pulse of the industry.
                                                     </p>
 
                                                 </div>
@@ -699,17 +700,15 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
                                                         Exhibition
                                                     </h3>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
+                                                    <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
-                                                        It showcases thought leadership and cutting-edge knowledge for the growth of the entire business community. A perfect platform that projects the pulse of the industry.
-                                                    </p>
+                                                   
 
                                                 </div>
                                             </div>
@@ -749,17 +748,15 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
                                                         Awards & Gala Evening
                                                     </h3>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
+                                                    <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
-                                                        It showcases thought leadership and cutting-edge knowledge for the growth of the entire business community. A perfect platform that projects the pulse of the industry.
-                                                    </p>
+                                                    
 
                                                 </div>
                                             </div>
@@ -768,7 +765,7 @@ const Happenings4 = () => {
                                                 CARD 4
                                             ================================================= */}
 
-                                            <div className="happening-card relative flex items-center gap-[1.5rem] py-[1rem] border-b border-[#E2E2E220] will-change-[opacity]">
+                                            <div className="happening-card relative flex items-center gap-[1.5rem] py-[1rem] will-change-[opacity]">
 
                                                 <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform">
 
@@ -799,17 +796,15 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
                                                         LIVE Performances
                                                     </h3>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
+                                                    <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
 
-                                                    <p className="happening-card-content mt-[0.5rem] text-[0.875rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
-                                                        It showcases thought leadership and cutting-edge knowledge for the growth of the entire business community. A perfect platform that projects the pulse of the industry.
-                                                    </p>
+                                                    
 
                                                 </div>
                                             </div>

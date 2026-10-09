@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyChooseUs = () => {
     return (
-        <section className="why-choose-us relative overflow-hidden py-[100px] flex flex-col justify-center items-center">
+        <section className="why-choose-us relative overflow-hidden py-[100px] flex flex-col justify-center items-center" data-gradient-section="default">
             <div className="max-w-7xl mx-auto w-full relative z-10 items-center px-[10px]">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] ">
 
@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
                         <div className="absolute pointer-events-none inset-[0.5rem] rounded-[1rem]">
                             <div className="absolute inset-0 rounded-[inherit] overflow-hidden" style={{
                                 WebkitMaskImage: "-webkit-radial-gradient(white, white)",
-                            }}><div className="kp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
+                            }}><div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
                         </div>
                         <div className="flex flex-col gap-[40px] items-center justify-center text-center h-full px-[20px]">
                             <div className="ic-img">
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
                         <div className="absolute pointer-events-none inset-[0.5rem] rounded-[1rem]">
                             <div className="absolute inset-0 rounded-[inherit] overflow-hidden" style={{
                                 WebkitMaskImage: "-webkit-radial-gradient(white, white)",
-                            }}><div className="kp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
+                            }}><div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
                         </div>
                         <div className="flex flex-col gap-[40px] items-center justify-center text-center h-full px-[20px]">
                             <div className="ic-img">
@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
                         <div className="absolute pointer-events-none inset-[0.5rem] rounded-[1rem]">
                             <div className="absolute inset-0 rounded-[inherit] overflow-hidden" style={{
                                 WebkitMaskImage: "-webkit-radial-gradient(white, white)",
-                            }}><div className="kp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
+                            }}><div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
                         </div>
                         <div className="flex flex-col gap-[40px] items-center justify-center text-center h-full px-[20px]">
                             <div className="ic-img">

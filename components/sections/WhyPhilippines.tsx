@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const WhyPhilippines = () => {
     return (
-        <section className="bg-[#181819] py-[80px] relative overflow-hidden">
+        <section className="py-[80px] relative WhyPhilippines" data-gradient-section="default">
             <div className="flex flex-col absolute left-0 top-1/2 -translate-y-1/2 opacity-[0.12]">
                 <span className="block w-[423px] h-[423px] shrink-0 rounded-full bg-gradient-to-b from-white/[0.12] to-white/[0.8]"></span>
                 <span className="block w-[423px] h-[423px] shrink-0 rounded-full bg-gradient-to-b from-white/[0.12] to-white/[0.8]"></span>

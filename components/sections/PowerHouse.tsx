@@ -29,13 +29,13 @@ const PowerHouse = () => {
         },
     ]
     return (
-        <section className="bg-style7 topics-section relative overflow-hidden py-[100px]">
+        <section className="topics-section relative overflow-hidden py-[100px] h-fit PowerHouse" data-gradient-section="default">
             <div className="w-full relative z-10 items-center px-[10px] lg:px-[60px]">
                 <div className="flex flex-col items-center gap-[80px]">
                     <div className="heading flex flex-col items-center gap-[40px]">
                         <div className="mx-auto flex w-full max-w-2xl flex flex-col items-center gap-[40px] text-center">
                             <h2 className="font-oswald text-center text-[clamp(1.2rem,4vw,2.53rem)] font-bold uppercase leading-[1.2]  text-white">
-                                Filipino Cyber-Savvy<br/>Leaders Coming To PhilSec
+                                Filipino Cyber-Savvy<br />Leaders Coming To PhilSec
                             </h2>
                             <div className="flex flex-col gap-[20px]">
                                 <p
@@ -46,7 +46,10 @@ const PowerHouse = () => {
                     </div>
                     <div className='grid lg:grid-cols-2 xl:grid-cols-4 w-full gap-[20px]'>
                         {powers.map((power, i) => (
-                            <div key={i} className='bg-[var(--overview-bg)] p-[10px] rounded-[20px]'>
+                            <div key={i} className='relative bg-[var(--overview-bg)] p-[10px] rounded-[20px]'>
+                                <div className="absolute inset-0 rounded-[inherit] overflow-hidden" style={{
+                                    WebkitMaskImage: "-webkit-radial-gradient(white, white)",
+                                }}><div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
                                 <div className='flex flex-col text-center gap-[20px]'>
                                     <div className="w-full h-[250px] md:h-[350px] lg:h-[400px] min-[1800px]:h-[500px] overflow-hidden rounded-[20px]">
                                         <video
