@@ -22,7 +22,7 @@ const Speakers = () => {
                                     className="font-oswald text-white font-bold leading-[1] text-[clamp(1.2rem,4vw,2.53rem)] text-center uppercase leading-[1]">
                                     VIP Chief Guest</h2>
                             </div>
-                            <div className="bg-[var(--secondary-color)] w-[150px] h-[3px]"></div>
+                            <div className="bg-[var(--secondary-color)] w-[150px] h-[3px] hidden"></div>
                         </div>
                         <div className="grid grid-cols-8 gap-[20px] justify-center">
                             <div className="col-span-6 md:col-span-2"></div>
@@ -78,7 +78,7 @@ const Speakers = () => {
                                     className="font-oswald text-white font-bold leading-[1] text-[clamp(1.2rem,4vw,2.53rem)] text-center tracking-[0.04rem] uppercase leading-[1]">
                                     Past Speakers</h2>
                             </div>
-                            <div className="bg-[var(--secondary-color)] w-[150px] h-[3px]"></div>
+                            <div className="bg-[var(--secondary-color)] w-[150px] h-[3px] hidden"></div>
                         </div>
                         <div className="overflow-hidden w-full mx-auto">
                             <Swiper

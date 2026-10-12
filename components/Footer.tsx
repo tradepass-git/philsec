@@ -100,7 +100,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[var(--main-color)] p-[10px] text-center text-white">All rights reserved. © {new Date().getFullYear()} Tradepass LLP.</div>
+                <div className="bg-black p-[10px] text-center text-white">All rights reserved. © {new Date().getFullYear()} Tradepass LLP.</div>
             </footer>
             <Modal
                 isOpen={open}

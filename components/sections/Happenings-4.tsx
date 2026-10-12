@@ -311,9 +311,9 @@ const Happenings4 = () => {
     return (
         <section
             ref={sectionRef}
-            className="tp-home-capabilities relative w-full h-screen overflow-hidden" data-gradient-section="default">
+            className="tp-home-capabilities relative w-full overflow-hidden" data-gradient-section="default">
             <div className="tp-grid tp-container h-full">
-                <div className="col-[1/-1] ms-[-2rem] h-full flex tp-home-capabilities-inner relative overflow-visible">
+                <div className="col-[1/-1] ms-[-1rem] h-full flex tp-home-capabilities-inner relative overflow-visible">
                     <div className="flex-none flex flex-row gap-[20.5rem] tp-home-capabilities-content will-change-transform">
                         {/* =====================================================
                             LEFT / ORBIT SECTION
@@ -329,7 +329,7 @@ const Happenings4 = () => {
                                 <div className="relative col-[1/2] lg:flex hidden h-screen items-center justify-center">
 
                                     {/* OUTER CIRCLE */}
-                                    <div className="absolute w-[40.25rem] h-[40.25rem] 2xl:w-[48.25rem] 2xl:h-[48.25rem] flex justify-center items-center">
+                                    <div className="absolute w-[40.25rem] h-[40.25rem] 2xl:w-[48.25rem] 2xl:h-[48.25rem] left-[-30rem] top-0 flex justify-center items-center">
 
                                         <div className="absolute inset-0 border-[0.125rem] rounded-full border-[#E2E2E21A]" />
 
@@ -343,7 +343,7 @@ const Happenings4 = () => {
                                                 CENTER LOGO
                                             ================================================= */}
 
-                                            <div className="relative z-[100] w-[8rem] h-[8rem] rounded-full flex items-center justify-center bg-white">
+                                            <div className="hidden relative z-[100] w-[8rem] h-[8rem] rounded-full flex items-center justify-center bg-white">
 
                                                 <div className="w-[5rem] h-[5rem] rounded-full bg-[#FE7061] flex items-center justify-center">
                                                     <span className="text-white text-[1rem] font-bold">
@@ -460,11 +460,12 @@ const Happenings4 = () => {
                                                     w-[23.5rem]
                                                     h-[55vh]
                                                     min-[1400px]:h-[60vh]
-                                                    min-[1600px]:h-[65vh]
+                                                    min-[1600px]:h-[70vh]
                                                     min-[1800px]:h-[50vh]
                                                     flex
                                                     items-center
                                                     justify-center
+                                                    ml-[60px]
                                                 "
                                             >
 
