@@ -29,7 +29,7 @@ const PowerHouse = () => {
         },
     ]
     return (
-        <section className="topics-section relative overflow-hidden py-[100px] h-fit PowerHouse" data-gradient-section="default">
+        <section className="topics-section relative overflow-hidden py-[80px] h-fit PowerHouse" data-gradient-section="default">
             <div className="w-full relative z-10 items-center px-[10px] lg:px-[60px]">
                 <div className="flex flex-col items-center gap-[80px]">
                     <div className="heading flex flex-col items-center gap-[40px]">

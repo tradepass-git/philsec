@@ -16,7 +16,7 @@ import CISO from "@/components/sections/CISO";
 import SeriesPartner from "@/components/sections/SeriesPartner";
 import NewsletterSubscrib from "@/components/sections/NewsletterSubscrib";
 import News from "@/components/sections/News";
-//import CommunityGallery from "@/components/sections/CommunityGallery"
+import CommunityGallery from "@/components/sections/CommunityGallery"
 export default function Home() {
   return (
     <main>
@@ -32,7 +32,7 @@ export default function Home() {
       <WhyChooseUs />
       <CISO />
       <SeriesPartner />
-      {/* <CommunityGallery /> */}
+      <CommunityGallery />
       <News />
       <NewsletterSubscrib />
     </main>

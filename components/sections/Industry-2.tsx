@@ -15,27 +15,27 @@ const topics = [
     },
     {
         icon: "/images/industry/ecommerce.svg",
-        name: "E-COMMERCE",
+        name: "E-Commerce",
     },
     {
         icon: "/images/industry/telecom.svg",
-        name: "TELECOM",
+        name: "Telecom",
     },
     {
         icon: "/images/industry/oilgas.svg",
-        name: "OIL & GAS",
+        name: "Oil & Gas",
     },
     {
         icon: "/images/industry/retail.svg",
-        name: "RETAIL",
+        name: "Retail",
     },
     {
         icon: "/images/industry/healthcare.svg",
-        name: "HEALTHCARE",
+        name: "Healthcare",
     },
     {
         icon: "/images/industry/mining.svg",
-        name: "MINING",
+        name: "Mining",
     },
     {
         icon: "/images/industry/fmcg.svg",
@@ -43,45 +43,45 @@ const topics = [
     },
     {
         icon: "/images/industry/media.svg",
-        name: "MEDIA",
+        name: "Media",
     },
     {
         icon: "/images/industry/avacation.svg",
-        name: "AVIATION",
+        name: "Aviation",
     },
     {
         icon: "/images/industry/logistics.svg",
-        name: "LOGISTICS",
+        name: "Logistics",
     },
     {
         icon: "/images/industry/construction.svg",
-        name: "CONSTRUCTION",
+        name: "Construction",
     },
     {
         icon: "/images/industry/education.svg",
-        name: "EDUCATION",
+        name: "Education",
     },
     {
         icon: "/images/industry/agriculture.svg",
-        name: "AGRICULTURE",
+        name: "Agriculture",
     },
     {
         icon: "/images/industry/hospitality.svg",
-        name: "HOSPITALITY",
+        name: "Hospitality",
     },
     {
         icon: "/images/industry/automobile.svg",
-        name: "AUTOMOBILE",
+        name: "Automobile",
     }
 ];
 
 const Industry_2 = () => {
-    const rows = [7, 5, 3, 2, 1];
+    const rows = [6, 5, 4, 3, 2];
     let startIndex = 0;
 
     return (
         <section
-            className="topics-section Industry relative overflow-hidden py-[100px]"
+            className="topics-section Industry relative overflow-hidden py-[80px]"
             data-gradient-section="default"
         >
             <div className="relative z-10 mx-auto w-full max-w-7xl px-[10px]">
@@ -104,27 +104,33 @@ const Industry_2 = () => {
                             return (
                                 <div
                                     key={rowIndex}
-                                    className="flex w-full flex-wrap justify-center gap-[12px] md:gap-[20px]"
+                                    className="flex gap-[0.75rem] lg:gap-[1.25rem]"
                                 >
                                     {rowTopics.map((topic, index) => (
-                                        <div
-                                            key={`${topic.name}-${index}`}
-                                            className="group flex gap-[10px] min-w-[100px] cursor-pointer items-center justify-center rounded-3xl border border-[#e3ff65] px-[20px] py-[10px] transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-                                        >
-                                            <div className="relative w-[22px] h-[22px]">
-                                                <Image
-                                                    priority
-                                                    src={topic.icon}
-                                                    alt={topic.name}
-                                                    fill
-                                                    sizes="22px"
-                                                    className="object-contain transition-transform duration-[600ms] [transform-style:preserve-3d] group-hover:rotate-y-180 group-hover:[filter:none] group-hover:duration-[900ms]"
-                                                />
+                                            <div key={`${topic.name}-${index}`} className="relative flex gap-[0.125rem] md:gap-[0.25rem] lg:gap-[0.75rem] p-[0.25rem] md:p-[0.375rem] lg:py-[1rem] lg:px-[1rem] min-w-[0rem] md:min-w-[6.25rem] lg:min-w-[12.25rem] relative h-fit items-center bg-[#000]/[0.1] bg-white/05 backdrop-blur-[0.75rem] rounded-full">
+                                                <div className="pointer-events-none absolute inset-0 left-1/2 top-1/2 h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full">
+                                                    <div
+                                                        className="absolute inset-0 overflow-hidden rounded-[inherit]"
+                                                        style={{ WebkitMaskImage: "-webkit-radial-gradient(white, white)" }}
+                                                    >
+                                                        <div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]" />
+                                                    </div>
+                                                    <div className="tp-border-shadow absolute inset-0 rounded-[inherit]" />
+                                                </div>
+                                                <div className="relative z-[1] flex justify-center items-center w-[36px] h-[36px] bg-[var(--forth-color)] rounded-[50%]">
+                                                    <Image
+                                                        priority
+                                                        src={topic.icon}
+                                                        alt={topic.name}
+                                                        width={18}
+                                                        height={18}
+                                                        className=""
+                                                    />
+                                                </div>
+                                                <p className="relative z-[1] fs-14 fs-6-mb text-white">
+                                                    {topic.name}
+                                                </p>
                                             </div>
-                                            <p className="text-center text-[12px] font-normal uppercase leading-[150%] text-white transition-colors duration-300 lg:text-[0.9rem]">
-                                                {topic.name}
-                                            </p>
-                                        </div>
                                     ))}
                                 </div>
                             );

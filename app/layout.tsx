@@ -1,4 +1,4 @@
-import { Montserrat, Oswald  } from "next/font/google";
+import { Montserrat, Oswald } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
@@ -13,9 +13,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 /* SectionGradients */
-import SectionGradients from "@/components/ui/SectionGradients";
-
-import NeatGradientBackground from "@/components/ui/NeatGradientBackground";
+//import SectionGradients from "@/components/ui/SectionGradients";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,8 +64,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
 
-        <SectionGradients />
-
 
         {/* --------------------------------------------------
             Smooth Scroll
@@ -78,7 +74,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* --------------------------------------------------
             Header
         -------------------------------------------------- */}
-        
+
 
         {/* --------------------------------------------------
             Main Content
@@ -94,7 +90,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           >
             <Header />
 
-            
+
             {children}
 
             {/* --------------------------------------------------

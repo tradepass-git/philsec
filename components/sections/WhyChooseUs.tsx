@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyChooseUs = () => {
     return (
-        <section className="why-choose-us relative overflow-hidden py-[100px] flex flex-col justify-center items-center" data-gradient-section="default">
+        <section className="why-choose-us relative overflow-hidden py-[80px] flex flex-col justify-center items-center" data-gradient-section="default">
             <div className="max-w-7xl mx-auto w-full relative z-10 items-center px-[10px]">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] ">
 

@@ -38,7 +38,7 @@ const topics = [
 
 const Topics = () => {
     return (
-        <section className="topics-section relative overflow-hidden flex flex-col justify-center items-center py-[100px]" data-gradient-section="default">
+        <section className="topics-section relative overflow-hidden flex flex-col justify-center items-center py-[80px]" data-gradient-section="default">
             <div className="max-w-7xl mx-auto w-full relative z-10 items-center px-[10px]">
                 <div className="flex flex-col items-center gap-[80px]">
                     <div className="heading flex flex-col items-center gap-[40px]">
@@ -53,7 +53,7 @@ const Topics = () => {
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-[28] gap-y-[30] w-full overflow-hidden'>
                         {topics.map((topic, i) => (
                             <div key={i} className={`single-topic ${i % 2 !== 0 ? 'top-border' : ''} totic-${i} group relative flex flex-col gap-[40] justify-center items-center`}>
-                                <div className='bg-[#0d0b33] rotate-[20px] px-[20px]  w-full rounded-[20px] flex flex-col gap-[30px] justify-center items-center text-center min-h-[200px]'>
+                                <div className='bg-[#141414] rotate-[20px] px-[20px]  w-full rounded-[20px] flex flex-col gap-[30px] justify-center items-center text-center min-h-[200px]'>
 
                                     <span className={`icon-${topic.icon} text-[42px] transition-transform duration-[600ms] [transform-style:preserve-3d] group-hover:rotate-y-180 group-hover:[filter:none] group-hover:duration-[900ms]`}></span>
                                     <p className='text-white font-500 text-[1rem] leading-[150%]' dangerouslySetInnerHTML={{ __html: topic.name }}></p>

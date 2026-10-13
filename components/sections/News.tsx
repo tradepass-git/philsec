@@ -3,7 +3,7 @@ import { NewsCard } from "@/components/ui/News";
 const News = async () => {
     const news = await getNews(10);
     return (
-        <section className="news relative overflow-hidden py-[100px]" data-gradient-section="default">
+        <section className="news relative overflow-hidden py-[80px]" data-gradient-section="default">
             <div className="max-w-7xl mx-auto w-full flex flex-col lg:gap-[80px] px-[10px]">
 
                 <div className="flex flex-col items-center gap-[60px]">

@@ -497,7 +497,7 @@ const Happenings4 = () => {
                                                         className="h-full w-auto max-w-none rounded-3xl"
                                                     >
                                                         <source
-                                                            src="/video/powerhouse/pre-qualified-delegates.mp4"
+                                                            src="/video/happenings/awards-gala.mp4"
                                                             type="video/mp4"
                                                         />
                                                     </video>
@@ -531,7 +531,7 @@ const Happenings4 = () => {
                                                         className="h-full w-auto max-w-none rounded-3xl"
                                                     >
                                                         <source
-                                                            src="/video/powerhouse/pre-qualified-delegates.mp4"
+                                                            src="/video/happenings/performance.mp4"
                                                             type="video/mp4"
                                                         />
                                                     </video>
@@ -565,7 +565,7 @@ const Happenings4 = () => {
                                                         className="h-full w-auto max-w-none rounded-3xl"
                                                     >
                                                         <source
-                                                            src="/video/powerhouse/pre-qualified-delegates.mp4"
+                                                            src="/video/happenings/conference.mp4"
                                                             type="video/mp4"
                                                         />
                                                     </video>
@@ -599,7 +599,7 @@ const Happenings4 = () => {
                                                         className="h-full w-auto max-w-none rounded-3xl"
                                                     >
                                                         <source
-                                                            src="/video/powerhouse/pre-qualified-delegates.mp4"
+                                                            src="/video/happenings/exhibition.mp4"
                                                             type="video/mp4"
                                                         />
                                                     </video>

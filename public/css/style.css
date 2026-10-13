@@ -1,9 +1,10 @@
+
 .single-topic {
   border: 1px dashed rgba(255, 255, 255, 0.28);
   border-radius: 20px;
   padding: 15px;
   backdrop-filter: blur(4.8000001907px);
-  background: rgba(74, 33, 239, 0.18);
+  background: #14141485;
 }
 
 .single-topic::before {
@@ -21,7 +22,7 @@
   mask-composite: add, add;
   -webkit-mask-composite: source-out;
   mask-composite: exclude;
-  background: linear-gradient(180deg, #4f3bf0 0%, #2dd98f 100%);
+  background: linear-gradient(180deg, #636363 0%, #636363 100%);
 }
 
 .single-topic::after {
@@ -31,7 +32,7 @@
   position: absolute;
   height: 2px;
   width: 28px;
-  background: linear-gradient(90deg, #4c2cef 13.38%, #2dd98f 48.09%, #4c2bef 80%);
+  background: linear-gradient(90deg, #636363 13.38%, var(--forth-color) 48.09%, #636363 80%);
 }
 
 .bg-style6 {
@@ -189,7 +190,7 @@
   position: absolute;
   inset: 0;
 
-  padding: 1px;
+  padding: max(1px, .0625rem);
 
   overflow: hidden;
   pointer-events: none;

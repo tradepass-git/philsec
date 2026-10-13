@@ -16,7 +16,7 @@ const SeriesPartner = () => {
         groupedLogos.push(logos.slice(i, i + 2));
     }
     return (
-        <section className='sponsors-partner relative overflow-hidden flex flex-col justify-center items-center py-[100px]'>
+        <section className='sponsors-partner relative overflow-hidden flex flex-col justify-center items-center py-[80px]'>
             <div className="mx-auto w-full flex flex-col gap-[80px] lg:px-20">
                 <div data-anim="fade-up" data-speed="1" data-delay="0.3" className="heading flex flex-col items-center gap-[40px]">
                     <div className="flex flex-col gap-[20px]">
