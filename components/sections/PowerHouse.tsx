@@ -66,7 +66,7 @@ const PowerHouse = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <div className='font-zuume text-[var(--secondary-color)] font-bold text-[clamp(1.9rem,8vw,7rem)] tracking-[0.09rem] leading-[1]'>{power.number}</div>
-                                        <h3 className='font-zuume text-[var(--secondary-color)] font-bold text-[2rem] tracking-[0.04rem]'>{power.name}</h3>
+                                        <h3 className='font-zuume text-white font-500 text-[2rem] tracking-[0.04rem]'>{power.name}</h3>
                                     </div>
                                 </div>
                             </div>

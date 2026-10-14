@@ -107,17 +107,12 @@ const Industry_2 = () => {
                                     className="flex gap-[0.75rem] lg:gap-[1.25rem]"
                                 >
                                     {rowTopics.map((topic, index) => (
-                                            <div key={`${topic.name}-${index}`} className="relative flex gap-[0.125rem] md:gap-[0.25rem] lg:gap-[0.75rem] p-[0.25rem] md:p-[0.375rem] lg:py-[1rem] lg:px-[1rem] min-w-[0rem] md:min-w-[6.25rem] lg:min-w-[12.25rem] relative h-fit items-center bg-[#000]/[0.1] bg-white/05 backdrop-blur-[0.75rem] rounded-full">
-                                                <div className="pointer-events-none absolute inset-0 left-1/2 top-1/2 h-[82%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full">
-                                                    <div
-                                                        className="absolute inset-0 overflow-hidden rounded-[inherit]"
-                                                        style={{ WebkitMaskImage: "-webkit-radial-gradient(white, white)" }}
-                                                    >
-                                                        <div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]" />
-                                                    </div>
-                                                    <div className="tp-border-shadow absolute inset-0 rounded-[inherit]" />
-                                                </div>
-                                                <div className="relative z-[1] flex justify-center items-center w-[36px] h-[36px] bg-[var(--forth-color)] rounded-[50%]">
+                                        <div key={`${topic.name}-${index}`} className="bg-[#18181969] py-[0.4rem] px-[0.4rem] rounded-full min-w-[11.50rem] justify-center items-center">
+                                            <div className="bg-black relative rounded-full flex py-[0.9rem] px-[1rem] gap-[0.9rem] items-center">
+                                                <div className="absolute inset-0 rounded-[inherit] overflow-hidden" style={{
+                                                    WebkitMaskImage: "-webkit-radial-gradient(white, white)",
+                                                }}><div className="tp-glass-border animate-border absolute inset-0 rounded-[inherit]"></div></div>
+                                                <div className="relative z-[1] flex justify-center items-center w-[36px] h-[36px] bg-gradient-to-r from-[#FF9D00] to-[#FF6A00] rounded-[50%]">
                                                     <Image
                                                         priority
                                                         src={topic.icon}
@@ -131,6 +126,8 @@ const Industry_2 = () => {
                                                     {topic.name}
                                                 </p>
                                             </div>
+
+                                        </div>
                                     ))}
                                 </div>
                             );

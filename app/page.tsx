@@ -19,22 +19,22 @@ import News from "@/components/sections/News";
 import CommunityGallery from "@/components/sections/CommunityGallery"
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Speakers />
-      <Overview />
-      <PowerHouse />
-      <WhyPhilippines />
-      <KeyStatistics />
-      <Industry2 />
-      <Happenings4 />
-      <Topics />
-      <WhyChooseUs />
-      <CISO />
-      <SeriesPartner />
-      <CommunityGallery />
-      <News />
-      <NewsletterSubscrib />
-    </main>
+      <main>
+        <Hero />
+        <Speakers />
+        <Overview />
+        <PowerHouse />
+        <WhyPhilippines />
+        <KeyStatistics />
+        <Industry2 />
+        <Happenings4 />
+        <Topics />
+        <WhyChooseUs />
+        <CISO />
+        <SeriesPartner />
+        <CommunityGallery />
+        <News />
+        <NewsletterSubscrib />
+      </main>
   );
 }

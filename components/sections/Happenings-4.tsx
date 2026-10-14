@@ -36,12 +36,15 @@ const Happenings4 = () => {
                 angle: Number(item.dataset.angle || 0),
             }));
 
+            const CIRCUMFERENCE = 180;
+
             /*
              * ---------------------------------------
              * UPDATE IMAGES + CARDS
              * ---------------------------------------
              */
-            const updateImagesAndCards = (progress: number) => {
+            const updateImagesAndCards = (rawProgress: number) => {
+                const progress = Math.max(0, Math.min(1, rawProgress));
                 const rotation = -progress * 360;
 
                 /*
@@ -107,18 +110,12 @@ const Happenings4 = () => {
 
                 /*
                  * ---------------------------------------
-                 * ACTIVE ORDER
-                 *
-                 * Video 1 → Card 1
-                 * Video 2 → Card 2
-                 * Video 3 → Card 3
-                 * Video 4 → Card 4
+                 * ACTIVE ORDER (Strictly capped between 0 and 3)
                  * ---------------------------------------
                  */
-                const activeIndex = Math.min(
-                    3,
-                    Math.floor(progress * 4)
-                );
+                const activeIndex = progress === 1 
+                    ? 3 
+                    : Math.min(3, Math.floor(progress * 4));
 
                 /*
                  * ---------------------------------------
@@ -197,19 +194,28 @@ const Happenings4 = () => {
                         );
 
                     if (progressBorder) {
+                        let dashOffset = CIRCUMFERENCE;
+
+                        if (isActive) {
+                            const cardProgress = (progress * 4) - index;
+                            const clampedProgress = Math.max(0, Math.min(1, cardProgress));
+                            dashOffset = CIRCUMFERENCE * (1 - clampedProgress);
+                        } else if (index < activeIndex) {
+                            dashOffset = 0;
+                        } else {
+                            dashOffset = CIRCUMFERENCE;
+                        }
+
                         gsap.set(progressBorder, {
-                            strokeDasharray: 0,
-                            strokeDashoffset:
-                                isActive
-                                    ? 0
-                                    : 0,
+                            strokeDasharray: CIRCUMFERENCE,
+                            strokeDashoffset: dashOffset,
                         });
                     }
                 });
 
                 /*
                  * ---------------------------------------
-                 * DOTS
+                 * DOTS (Only active dot is white, others #D9D9D9)
                  * ---------------------------------------
                  */
                 const dots =
@@ -264,12 +270,11 @@ const Happenings4 = () => {
 
                     start: "top top",
 
-                    /*
-                     * Longer = slower rotation
-                     */
-                    end: "+=1800",
+                    end: "+=1400",
 
-                    scrub: 1,
+                    scrub: true,
+
+                    pinSpacing: true,
 
                     anticipatePin: 1,
 
@@ -279,20 +284,6 @@ const Happenings4 = () => {
                         updateImagesAndCards(
                             self.progress
                         );
-                    },
-
-                    onLeave: () => {
-                        updateImagesAndCards(1);
-                    },
-
-                    onEnterBack: (self) => {
-                        updateImagesAndCards(
-                            self.progress
-                        );
-                    },
-
-                    onLeaveBack: () => {
-                        updateImagesAndCards(0);
                     },
                 });
 
@@ -626,9 +617,9 @@ const Happenings4 = () => {
 
                                             <div className="happening-card relative flex items-center gap-[1.5rem] py-[1rem] border-b border-[#E2E2E220] will-change-[opacity]">
 
-                                                <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform">
+                                                <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform ">
 
-                                                    <span className="text-[1.25rem] font-bold">
+                                                    <span className="text-[1.25rem] font-bold text-[var(--secondary-color)]">
                                                         01
                                                     </span>
 
@@ -644,10 +635,8 @@ const Happenings4 = () => {
                                                             height="56"
                                                             rx="28"
                                                             fill="none"
-                                                            stroke="currentColor"
+                                                            stroke="#e3ff65"
                                                             strokeWidth="2"
-                                                            strokeDasharray="165.2"
-                                                            strokeDashoffset="0"
                                                         />
                                                     </svg>
 
@@ -655,7 +644,7 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Conference
                                                     </h3>
 
@@ -674,7 +663,7 @@ const Happenings4 = () => {
 
                                                 <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform">
 
-                                                    <span className="text-[1.25rem] font-bold">
+                                                    <span className="text-[1.25rem] font-bold text-[var(--secondary-color)]">
                                                         02
                                                     </span>
 
@@ -690,10 +679,8 @@ const Happenings4 = () => {
                                                             height="56"
                                                             rx="28"
                                                             fill="none"
-                                                            stroke="currentColor"
+                                                            stroke="#e3ff65"
                                                             strokeWidth="2"
-                                                            strokeDasharray="165.2"
-                                                            strokeDashoffset="165.2"
                                                         />
                                                     </svg>
 
@@ -701,15 +688,13 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Exhibition
                                                     </h3>
 
                                                     <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
-
-                                                   
 
                                                 </div>
                                             </div>
@@ -722,7 +707,7 @@ const Happenings4 = () => {
 
                                                 <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform">
 
-                                                    <span className="text-[1.25rem] font-bold">
+                                                    <span className="text-[1.25rem] font-bold text-[var(--secondary-color)]">
                                                         03
                                                     </span>
 
@@ -738,10 +723,8 @@ const Happenings4 = () => {
                                                             height="56"
                                                             rx="28"
                                                             fill="none"
-                                                            stroke="currentColor"
+                                                            stroke="#e3ff65"
                                                             strokeWidth="2"
-                                                            strokeDasharray="165.2"
-                                                            strokeDashoffset="165.2"
                                                         />
                                                     </svg>
 
@@ -749,15 +732,13 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Awards & Gala Evening
                                                     </h3>
 
                                                     <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
-
-                                                    
 
                                                 </div>
                                             </div>
@@ -770,7 +751,7 @@ const Happenings4 = () => {
 
                                                 <div className="happening-card-icon relative shrink-0 w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full border border-[#E2E2E240] will-change-transform">
 
-                                                    <span className="text-[1.25rem] font-bold">
+                                                    <span className="text-[1.25rem] font-bold ">
                                                         04
                                                     </span>
 
@@ -786,10 +767,8 @@ const Happenings4 = () => {
                                                             height="56"
                                                             rx="28"
                                                             fill="none"
-                                                            stroke="currentColor"
+                                                            stroke="#e3ff65"
                                                             strokeWidth="2"
-                                                            strokeDasharray="165.2"
-                                                            strokeDashoffset="165.2"
                                                         />
                                                     </svg>
 
@@ -797,15 +776,13 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase">
+                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         LIVE Performances
                                                     </h3>
 
                                                     <p className="happening-card-content mt-[0.5rem] text-[0.775rem] 2xl:text-[1rem] leading-[1.4] opacity-70 max-w-[28rem] will-change-[opacity]">
                                                         Presenting the top inspiring names from the industry at the main stage to share crucial intelligence on the most pressing topics, which gets further enriched by a Q&A session.
                                                     </p>
-
-                                                    
 
                                                 </div>
                                             </div>

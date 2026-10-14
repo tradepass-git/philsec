@@ -137,9 +137,9 @@ function GalleryItemView({ item }: { item: GalleryItem }) {
 
     const colorClass =
         card.variant === "teal"
-            ? "bg-[#00C8B3] text-black"
+            ? "bg-[var(--forth-color)] text-black"
             : card.variant === "yellow"
-                ? "bg-[#D3FF00] text-black"
+                ? "bg-[var(--secondary-color)] text-black"
                 : "bg-[#F3F3F3] text-black";
 
     return (
@@ -150,7 +150,7 @@ function GalleryItemView({ item }: { item: GalleryItem }) {
                 {card.value}
             </h3>
 
-            <div className="text-[clamp(1rem,2vw,2.75rem)] font-medium leading-tight">
+            <div className="text-[clamp(1rem,2vw,2rem)] font-medium leading-tight">
                 {card.lines.map((line, index) => (
                     <div key={`${line}-${index}`}>{line}</div>
                 ))}

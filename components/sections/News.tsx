@@ -4,6 +4,7 @@ const News = async () => {
     const news = await getNews(10);
     return (
         <section className="news relative overflow-hidden py-[80px]" data-gradient-section="default">
+           {/* <img src="/images/bg-wave.png" className="absolute w-full h-full top-0 left-0 opacity-70" /> */} 
             <div className="max-w-7xl mx-auto w-full flex flex-col lg:gap-[80px] px-[10px]">
 
                 <div className="flex flex-col items-center gap-[60px]">
