@@ -311,6 +311,7 @@
 .community-marquee-right {
   animation-name: community-scroll-right;
 }
+
 /*
 .community-marquee:hover .community-marquee-track {
   animation-play-state: paused;
@@ -346,4 +347,26 @@
   .community-marquee-track {
     animation-play-state: paused;
   }
+}
+
+
+.shadow-card-xl {
+  --tw-shadow: 0 8px 24px 0 var(--tw-shadow-color, #0000001f);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+
+.bg-natural-white\/5 {
+  background-color: #ffffff0d;
+  background-color: lab(100% -.0000298023 .0000119209 / .05);
+}
+
+.-tracking-lg {
+  --tw-tracking: calc(3% * -1);
+  letter-spacing: calc(3% * -1);
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+
 }

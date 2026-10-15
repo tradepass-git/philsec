@@ -37,6 +37,14 @@
   font-family: var(--font-oswald), sans-serif;
 }
 
+.font-geist-mono {
+  font-family: var(--font-geist-mono), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -69,6 +77,10 @@ a[href*="neat"] {
       #fec77f 65%,
       #fec77f 55%,
       #e3ff6587 100%);
+}
+
+.newsletter-section{
+  background: linear-gradient(2.48deg,#e3ff65,#84F9D9);
 }
 
 .footerBG {

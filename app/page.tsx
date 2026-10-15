@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/sections/hero"
 import Speakers from "@/components/sections/Speakers"
 import Overview from "@/components/sections/Overview"

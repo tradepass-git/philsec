@@ -56,13 +56,13 @@ export default function NewsletterSubscrib() {
     };
 
     return (
-        <section className="newsletter-section relative overflow-hidden bg-white py-[60px]">
+        <section className="newsletter-section relative overflow-hidden py-[30px]">
             <div className="max-w-5xl mx-auto px-[10px]">
                 <div className="grid grid-cols-12 md:gap-x-[30px] gap-y-[30px] items-center">
 
                     {/* Text */}
-                    <div className="md:col-span-6 col-span-12">
-                        <div className="text-[clamp(1.3rem,2vw,1.5rem)] text-center md:text-right font-bold leading-[1.2] text-black">
+                    <div className="md:col-span-5 col-span-12">
+                        <div className="text-[1rem] text-center md:text-right font-bold leading-[1.2] text-black">
                             Stay Informed<br />Subscribe to Our #PhilSec Newsletter
                         </div>
                     </div>
@@ -77,13 +77,13 @@ export default function NewsletterSubscrib() {
                                     placeholder="Please enter your official email address*"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full p-3 rounded-tl-[8px] rounded-bl-[8px] border border-[var(--main-color)] text-black !border-r-0 focus:outline-none"
+                                    className="w-full p-3 rounded-tl-[8px] rounded-bl-[8px] border border-black text-black !border-r-0 focus:outline-none"
                                 />
 
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="bg-[var(--main-color)] opacity-100 w-[150px] p-3 rounded-tr-[8px] rounded-br-[8px] text-black font-bold uppercase cursor-pointer"
+                                    className="bg-black opacity-100 w-[150px] p-3 rounded-tr-[8px] rounded-br-[8px] text-white font-bold uppercase cursor-pointer"
                                 >
                                     {loading ? "Sending..." : "Submit"}
                                 </button>

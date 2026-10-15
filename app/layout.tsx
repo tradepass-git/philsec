@@ -1,7 +1,7 @@
-import { Montserrat, Oswald } from "next/font/google";
+import { Montserrat, Oswald, Inter } from "next/font/google";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Script from "next/script";
+import Footer from "@/components/FooterNew";
+//import Script from "next/script";
 import SmoothScroll from "@/components/SmoothScroll";
 //import GSAPAnimations from "@/components/GSAPAnimations";
 import localFont from "next/font/local";
@@ -40,6 +40,12 @@ const oswald = Oswald({
   weight: ["400", "500", "600", "700"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 
 const mangoGrotesque = localFont({
   src: [
@@ -57,25 +63,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${mangoGrotesque.variable} ${oswald.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${mangoGrotesque.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-
         {/* --------------------------------------------------
             Smooth Scroll
         -------------------------------------------------- */}
-
         <SmoothScroll />
-
-        {/* --------------------------------------------------
-            Header
-        -------------------------------------------------- */}
-
-
-        {/* --------------------------------------------------
-            Main Content
-        -------------------------------------------------- */}
-
         <div
           id="smooth-wrapper"
           className="overflow-hidden"
@@ -84,15 +78,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             id="smooth-content"
             className="will-change-transform"
           >
+            {/* --------------------------------------------------
+            Header
+        -------------------------------------------------- */}
             <Header />
-
-
+            {/* --------------------------------------------------
+            Main Content
+        -------------------------------------------------- */}
             {children}
-
             {/* --------------------------------------------------
                 Footer
             -------------------------------------------------- */}
-
             <Footer />
           </div>
         </div>
