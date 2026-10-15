@@ -31,9 +31,10 @@ const Happenings4 = () => {
         if (!items.length || !cards.length) return;
 
         const ctx = gsap.context(() => {
-            const imageData = Array.from(items).map((item) => ({
+            const imageData = Array.from(items).map((item, index) => ({
                 element: item,
                 angle: Number(item.dataset.angle || 0),
+                index: index,
             }));
 
             const CIRCUMFERENCE = 180;
@@ -45,15 +46,36 @@ const Happenings4 = () => {
              */
             const updateImagesAndCards = (rawProgress: number) => {
                 const progress = Math.max(0, Math.min(1, rawProgress));
-                const rotation = -progress * 360;
 
                 /*
                  * ---------------------------------------
-                 * IMAGE ORBIT
+                 * ACTIVE ORDER (Strictly capped between 0 and 3)
                  * ---------------------------------------
                  */
+                const scaledProgress = progress * 4;
+                const activeIndex = progress >= 1 
+                    ? 3 
+                    : Math.min(3, Math.floor(scaledProgress));
+
+                /*
+                 * ---------------------------------------
+                 * ROTATION (Freeze rotation when Card 4 is active)
+                 * ---------------------------------------
+                 */
+                const rotationProgress = activeIndex === 3 ? 0.75 : progress;
+                const rotation = -rotationProgress * 360;
+
+                /*
+                 * ---------------------------------------
+                 * IMAGE ORBIT (Fluid scaling using vw units)
+                 * ---------------------------------------
+                 */
+                // Dynamically computes translation distance based on viewport width
+                // Keeps the orbit perfectly proportioned across 1366px, 1920px, 2560px, etc.
+                const vwTranslate = Math.min(Math.max(window.innerWidth * 0.028, 25), 38);
+
                 imageData.forEach(
-                    ({ element, angle: baseAngle }) => {
+                    ({ element, angle: baseAngle, index: itemIndex }) => {
                         const angle = baseAngle + rotation;
 
                         const normalizedAngle =
@@ -72,11 +94,16 @@ const Happenings4 = () => {
                                 distanceFromCenter / 180) *
                             0.29;
 
-                        const opacity =
+                        let opacity =
                             0.43 +
                             (1 -
                                 distanceFromCenter / 180) *
                             0.57;
+
+                        // Hide video when Card 4 is active
+                        if (itemIndex === 3 && activeIndex === 3) {
+                            opacity = 0;
+                        }
 
                         const zIndex = Math.round(
                             55 +
@@ -89,7 +116,7 @@ const Happenings4 = () => {
                         gsap.set(element, {
                             transform: `
                                 rotate(${angle}deg)
-                                translate(43.125rem)
+                                translate(${vwTranslate}rem)
                                 rotate(${-angle}deg)
                                 scale(${Math.max(
                                 0.68,
@@ -100,22 +127,13 @@ const Happenings4 = () => {
                             )})
                             `,
                             opacity: Math.max(
-                                0.43,
+                                0,
                                 Math.min(1, opacity)
                             ),
                             zIndex,
                         });
                     }
                 );
-
-                /*
-                 * ---------------------------------------
-                 * ACTIVE ORDER (Strictly capped between 0 and 3)
-                 * ---------------------------------------
-                 */
-                const activeIndex = progress === 1 
-                    ? 3 
-                    : Math.min(3, Math.floor(progress * 4));
 
                 /*
                  * ---------------------------------------
@@ -197,7 +215,7 @@ const Happenings4 = () => {
                         let dashOffset = CIRCUMFERENCE;
 
                         if (isActive) {
-                            const cardProgress = (progress * 4) - index;
+                            const cardProgress = scaledProgress - index;
                             const clampedProgress = Math.max(0, Math.min(1, cardProgress));
                             dashOffset = CIRCUMFERENCE * (1 - clampedProgress);
                         } else if (index < activeIndex) {
@@ -305,7 +323,7 @@ const Happenings4 = () => {
             className="tp-home-capabilities relative w-full overflow-hidden" data-gradient-section="default">
             <div className="tp-grid tp-container h-full">
                 <div className="col-[1/-1] ms-[-1rem] h-full flex tp-home-capabilities-inner relative overflow-visible">
-                    <div className="flex-none flex flex-row gap-[20.5rem] tp-home-capabilities-content will-change-transform">
+                    <div className="flex-none flex flex-row gap-[10rem] xl:gap-[20.5rem] tp-home-capabilities-content will-change-transform w-full">
                         {/* =====================================================
                             LEFT / ORBIT SECTION
                         ===================================================== */}
@@ -320,7 +338,7 @@ const Happenings4 = () => {
                                 <div className="relative col-[1/2] lg:flex hidden h-screen items-center justify-center">
 
                                     {/* OUTER CIRCLE */}
-                                    <div className="absolute w-[40.25rem] h-[40.25rem] 2xl:w-[48.25rem] 2xl:h-[48.25rem] left-[-30rem] top-0 flex justify-center items-center">
+                                    <div className="absolute w-[35rem] h-[35rem] xl:w-[42rem] xl:h-[42rem] 2xl:w-[48.25rem] 2xl:h-[48.25rem] left-[-22rem] xl:left-[-28rem] 2xl:left-[-30rem] top-0 flex justify-center items-center">
 
                                         <div className="absolute inset-0 border-[0.125rem] rounded-full border-[#E2E2E21A]" />
 
@@ -328,7 +346,7 @@ const Happenings4 = () => {
                                             CENTER AREA
                                         ================================================= */}
 
-                                        <div className="w-[23.5rem] h-[23.5rem] relative flex justify-center items-center">
+                                        <div className="w-[20rem] xl:w-[23.5rem] h-[20rem] xl:h-[23.5rem] relative flex justify-center items-center">
 
                                             {/* =================================================
                                                 CENTER LOGO
@@ -448,15 +466,15 @@ const Happenings4 = () => {
                                                     min-[1400px]:-translate-y-1/3
                                                     min-[1600px]:-translate-y-1/2
                                                     pointer-events-none
-                                                    w-[23.5rem]
-                                                    h-[55vh]
-                                                    min-[1400px]:h-[60vh]
-                                                    min-[1600px]:h-[70vh]
-                                                    min-[1800px]:h-[50vh]
+                                                    w-[20rem]
+                                                    xl:w-[23.5rem]
+                                                    h-[45vh]
+                                                    xl:h-[60vh]
                                                     flex
                                                     items-center
                                                     justify-center
-                                                    ml-[60px]
+                                                    ml-[40px]
+                                                    xl:ml-[60px]
                                                 "
                                             >
 
@@ -605,7 +623,7 @@ const Happenings4 = () => {
                                     RIGHT CONTENT
                                 ===================================================== */}
 
-                                <div className="relative col-[1/-1] lg:col-[11/-1] h-auto lg:h-screen flex flex-col justify-center">
+                                <div className="relative col-[1/-1] lg:col-[11/-1] h-auto lg:h-screen flex flex-col justify-center px-4 lg:px-0 w-full max-w-xl mx-auto lg:max-w-none">
 
                                     <div className="relative lg:w-full w-full">
 
@@ -644,7 +662,7 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.25rem] lg:text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Conference
                                                     </h3>
 
@@ -688,7 +706,7 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.25rem] lg:text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Exhibition
                                                     </h3>
 
@@ -732,7 +750,7 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.25rem] lg:text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         Awards & Gala Evening
                                                     </h3>
 
@@ -776,7 +794,7 @@ const Happenings4 = () => {
 
                                                 <div className="flex-1 min-w-0">
 
-                                                    <h3 className="font-oswald happening-card-title text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
+                                                    <h3 className="font-oswald happening-card-title text-[1.25rem] lg:text-[1.5rem] font-bold leading-none will-change-[opacity] uppercase text-[var(--secondary-color)]">
                                                         LIVE Performances
                                                     </h3>
 
