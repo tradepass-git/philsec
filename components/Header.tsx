@@ -462,7 +462,7 @@ const Header = () => {
                                                                                         href={
                                                                                             item.href
                                                                                         }
-                                                                                        className="flex items-center justify-between gap-4 text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                        className="flex items-center justify-between gap-4 text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--main-color)] transition-colors"
                                                                                     >
                                                                                         {
                                                                                             item.name
@@ -477,7 +477,7 @@ const Header = () => {
                                                                                 ) : (
                                                                                     <button
                                                                                         type="button"
-                                                                                        className="w-full flex items-center justify-between gap-4 text-left text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                        className="w-full flex items-center justify-between gap-4 text-left text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--main-color)] transition-colors"
                                                                                     >
                                                                                         {
                                                                                             item.name
@@ -513,7 +513,7 @@ const Header = () => {
                                                                                                                 href={
                                                                                                                     subItem.href
                                                                                                                 }
-                                                                                                                className="block text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--secondary-color)] transition-colors"
+                                                                                                                className="block text-[12px] min-[1600px]:text-[16px] font-bold uppercase hover:text-[var(--main-color)] transition-colors"
                                                                                                             >
                                                                                                                 {
                                                                                                                     subItem.name

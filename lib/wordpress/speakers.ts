@@ -3,13 +3,12 @@ import { wpFetch } from "./client";
 
 export async function getSpeakers(
     conferenceYear: number | string,
-    perPage = 100
+    perPage = 100,
+    category?: string
 ) {
-    // Get taxonomy term ID from the year slug
     const terms = await wpFetch<{ id: number }[]>(
         `conference_year?slug=${encodeURIComponent(String(conferenceYear))}`,
         {
-            //revalidate: 86400,
             cache: "no-store",
             tags: [`wordpress-conference-year-${conferenceYear}`],
         }
@@ -18,20 +17,40 @@ export async function getSpeakers(
     const termId = terms[0]?.id;
 
     if (!termId) {
-        console.warn(
-            `Conference year "${conferenceYear}" was not found.`
-        );
-
+        console.warn(`Conference year "${conferenceYear}" was not found.`);
         return [];
     }
 
+    const params = new URLSearchParams({
+        per_page: String(Math.min(Math.max(perPage, 1), 100)),
+        conference_year: String(termId),
+        orderby: "menu_order",
+        order: "asc",
+        _embed: "true",
+    });
+
+    if (category) {
+        const categories = await wpFetch<{ id: number }[]>(
+            `categories?slug=${encodeURIComponent(category)}`,
+            {
+                cache: "no-store",
+                tags: [`wordpress-category-${category}`],
+            }
+        );
+
+        const categoryId = categories[0]?.id;
+
+        if (!categoryId) {
+            console.warn(`Category "${category}" was not found.`);
+            return [];
+        }
+
+        params.set("categories", String(categoryId));
+    }
+
     return wpFetch<WPSpeaker[]>(
-        `malaysia_speaker?per_page=${Math.min(
-            Math.max(perPage, 1),
-            100
-        )}&conference_year=${termId}&orderby=menu_order&order=asc&_embed`,
+        `philsec_speaker?${params.toString()}`,
         {
-            //revalidate: 300,
             cache: "no-store",
             tags: [`wordpress-speakers-${conferenceYear}`],
         }
