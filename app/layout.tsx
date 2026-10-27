@@ -1,4 +1,5 @@
 import { Montserrat, Oswald, Inter } from "next/font/google";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "@/components/Header";
 import Footer from "@/components/FooterNew";
 //import Script from "next/script";

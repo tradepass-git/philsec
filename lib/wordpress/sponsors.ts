@@ -28,7 +28,7 @@ export async function getSponsors(
     const limit = Math.min(Math.max(perPage, 1), 100);
 
     return wpFetch<WPSponsor[]>(
-        `malaysia_sponsor?per_page=${limit}&conference_year=${termId}&orderby=menu_order&order=asc&_embed`,
+        `philsec_sponsor?per_page=${limit}&conference_year=${termId}&orderby=menu_order&order=asc&_embed`,
         {
             //revalidate: 300,
             cache: "no-store",

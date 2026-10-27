@@ -70,17 +70,22 @@ export default async function Speakers2023() {
                 <section className="speakers-section relative overflow-hidden py-[60px] pt-0">
                     <div className="mx-auto w-full relative z-10 px-5">
                         <div className="flex flex-col items-center gap-[60px]">
-                            <div className="w-full grid grid-cols-12 sm:grid-cols-12 2xl:grid-cols-6 gap-4">
+                            <div className="w-full flex flex-wrap justify-center gap-4">
                                 {speakers.map((speaker: any, index: number) => {
                                     const fullName = speaker?.title?.rendered?.trim() || "";
                                     return (
-                                        <SingleSpeaker key={index}
-                                            name={fullName}
-                                            designation={speaker?.acf?.designation}
-                                            company={speaker?.acf?.company}
-                                            imageId={speaker?.acf?.speaker_image}
-                                        />
+                                        <div className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
+
+                                            <SingleSpeaker key={index}
+                                                name={fullName}
+                                                designation={speaker?.acf?.designation}
+                                                company={speaker?.acf?.company}
+                                                imageId={speaker?.acf?.speaker_image}
+                                                linkedinUrl={speaker?.acf?.linkedin_url}
+                                            />
+                                        </div>
                                     );
+
                                 })}
                             </div>
                         </div>
