@@ -8,6 +8,7 @@ type SingleSpeakerProps = {
     company: string;
     imageId: number;
     linkedinUrl?: string;
+    id?: number
 };
 
 const SingleSpeaker = ({
@@ -16,6 +17,7 @@ const SingleSpeaker = ({
     company,
     imageId,
     linkedinUrl,
+    id,
 }: SingleSpeakerProps) => {
     return (
         <div className="relative overflow-hidden rounded-[12px] bg-[#222222] p-[10px]">
@@ -36,7 +38,7 @@ const SingleSpeaker = ({
                 </div>
             )}
 
-            <div className="relative h-[357px] overflow-hidden rounded-[12px] bg-[url('/images/speakers-bg.webp')] bg-cover bg-center bg-no-repeat">
+            <div className="relative h-[357px] overflow-hidden rounded-[12px] bg-[url('/images/speakers-bg.png')] bg-cover bg-center bg-no-repeat">
                 <img
                     src={`/api/image/${imageId}/`}
                     alt={name || "Speaker"}
@@ -46,12 +48,12 @@ const SingleSpeaker = ({
 
             <div className="flex h-[200px] w-full flex-col items-center justify-center gap-[10px] px-[10px] py-[30px]">
                 <h3
-                    className="font-zuume text-center text-[1.75rem] font-bold uppercase leading-[1] tracking-[1px] text-white"
+                    className={`font-zuume text-center ${id == 8650 ? "text-[1.4rem]" : "text-[1.75rem]"} font-bold uppercase leading-[1] tracking-[1px] text-white`}
                     dangerouslySetInnerHTML={{ __html: name ?? "" }}
                 />
 
                 <p
-                    className="text-center text-[0.9rem] text-white"
+                    className="text-center text-[0.9rem] text-white leading-5"
                     dangerouslySetInnerHTML={{
                         __html: designation ?? "",
                     }}

@@ -50,7 +50,7 @@ const FooterNew = () => {
                 </div>
                 <div className="max-w-7xl mx-auto w-full flex flex-col gap-[80px] px-[10px]">
                     <div className="relative h-50 overflow-hidden">
-                        <div className="font-inter -tracking-xl absolute top-0 left-0 justify-start text-[132px] leading-[100%] font-medium opacity-25 md:text-[240px] lg:text-[230px] bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(52,52,52,0)_100%)] bg-clip-text text-transparent">Contact Us</div>
+                        <div className="font-inter -tracking-xl absolute top-0 left-0 justify-start text-[132px] leading-[100%] font-medium opacity-25 md:text-[240px] lg:text-[230px] bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(52,52,52,0.64)_100%)] bg-clip-text text-transparent">Contact Us</div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-[40px]">
                         <div className="flex flex-col gap-[20px]">

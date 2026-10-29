@@ -9,7 +9,7 @@ const VIPSpeaker = async () => {
             {vip_speakers.map((speaker: any, index: number) => {
                 const fullName = speaker?.title?.rendered?.trim() || "";
                 return (
-                    <div className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
+                    <div key={index} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
                         <SingleSpeaker key={index}
                             name={fullName}
                             designation={speaker?.acf?.designation}

@@ -92,3 +92,133 @@
 .devLine>svg path {
     stroke: #353535;
 }
+
+
+
+.mil-advantage:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    border: 3px solid #e5e5e5;
+    border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, #e5e5e5 1px, #e5e5e5 3px) 3;
+    position: absolute;
+    top: 115px;
+    left: 0;
+    transition: .4s cubic-bezier(0, 0, .3642, 1);
+}
+
+.mil-advantage:hover:before {
+    background-color: #fff0;
+    border: 3px solid #ffcd7f;
+    border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, #ffcd7f 1px, #ffcd7f 3px) 3;
+}
+
+.mil-icon-border {
+    border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, #e5e5e5 1px, #e5e5e5 3px) 5;
+}
+
+.mil-advantage:hover .mil-icon-border,
+.mil-benefits:hover .mil-icon-border {
+    border: 5px solid #ffcd7f;
+    border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, #ffcd7f 1px, #ffcd7f 3px) 5;
+}
+
+.mil-benefits img {
+    transition: .2s cubic-bezier(0, 0, .3642, 1);
+}
+
+.mil-benefits:hover img {
+    transform: scale(1.1);
+}
+
+
+
+.why-section.sponsor-section :global(.hs-input:not(.hs-fieldtype-intl-phone)) {
+    background: #f8f8f8;
+    line-height: 1.25;
+    padding: 17px 20px;
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #f8f8f8;
+}
+
+.why-section.sponsor-section :global(select.hs-input) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+}
+
+.why-section.sponsor-section :global(.hs-submit) {
+    text-align: center;
+}
+
+.why-section.sponsor-section :global(.hs-button) {
+    display: inline-block;
+    border: none !important;
+    padding: 0 23px;
+    font-size: 16px;
+    transition: all .3s ease;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #ffc470;
+    color: #000;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.why-section.sponsor-section :global(.hs-button:hover) {
+    background: #222;
+    color: #fff;
+}
+
+.why-section.sponsor-section :global(.form-columns-2),
+.why-section.sponsor-section :global(.form-columns-1) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+}
+
+.why-section.sponsor-section :global(.hs-fieldtype-intl-phone) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.why-section.sponsor-section :global(.hs-error-msg),
+.why-section.sponsor-section :global(.hs-error-msgs) {
+    color: red;
+}
+
+.why-section.sponsor-section :global(.hs-error-msgs) {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.why-section.sponsor-section .sponsor-form ::placeholder {
+    color: #333;
+    opacity: 1;
+    /* Firefox */
+}
+
+.why-section.sponsor-section .sponsor-form ::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: #333;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .why-section.sponsor-section :global(.form-columns-2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

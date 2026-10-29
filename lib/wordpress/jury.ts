@@ -34,7 +34,7 @@ export async function getJury(
     );
 
     return wpFetch<WPJury[]>(
-        `malaysia_jury?per_page=${limit}&conference_year=${termId}&orderby=menu_order&order=asc&_embed`,
+        `philsec_jury?per_page=${limit}&conference_year=${termId}&orderby=menu_order&order=asc&_embed`,
         {
             revalidate: 300,
             tags: [

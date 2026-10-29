@@ -67,29 +67,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${mangoGrotesque.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* --------------------------------------------------
-            Smooth Scroll
-        -------------------------------------------------- */}
         <SmoothScroll />
-        <div
-          id="smooth-wrapper"
-          className="overflow-hidden"
-        >
-          <div
-            id="smooth-content"
-            className="will-change-transform"
-          >
-            {/* --------------------------------------------------
-            Header
-        -------------------------------------------------- */}
-            <Header />
-            {/* --------------------------------------------------
-            Main Content
-        -------------------------------------------------- */}
+        <Header />
+        <div id="smooth-wrapper" className="overflow-hidden">
+          <div id="smooth-content" className="will-change-transform">
             {children}
-            {/* --------------------------------------------------
-                Footer
-            -------------------------------------------------- */}
             <Footer />
           </div>
         </div>

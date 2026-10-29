@@ -60,7 +60,7 @@ export default async function Sponsors2025() {
   //console.log(sponsors);
   return (
     <>
-      <div className="page-content bg-white">
+      <div className="page-content bg-white pt-[120px]">
         <section className="bg-style4 relative overflow-hidden">
           <div className="relative z-10 max-w-7xl mx-auto w-full px-[20px]">
             <div className="flex flex-col justify-end items-center gap-[30px] py-[60px]">

@@ -318,7 +318,7 @@ const Happenings4 = () => {
     }, []);
 
     return (
-        <section
+        <section id="happenings"
             ref={sectionRef}
             className="tp-home-capabilities relative w-full overflow-hidden" data-gradient-section="default">
             <div className="tp-grid tp-container h-full">

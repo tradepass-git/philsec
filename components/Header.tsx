@@ -132,7 +132,10 @@ const menu: MenuGroup[] = [
             {
                 name: "2023",
                 items: [
-
+                    {
+                        name: "Agenda",
+                        href: "/agenda-2023/",
+                    },
                     {
                         name: "Speakers",
                         href: "/2023-speakers",
@@ -170,6 +173,7 @@ const Header = () => {
     ===================================================== */
 
     const [menuOpen, setMenuOpen] = useState(false);
+
 
     /*
      * Main mobile dropdown
@@ -303,6 +307,7 @@ const Header = () => {
 
         return () => clearTimeout(timer);
     }, [pathname]);
+    
 
     /* =====================================================
        RETURN
@@ -318,13 +323,13 @@ const Header = () => {
                     <span>2026 Edition Has Been Concluded Successfully! See You All In 2027!</span>
                 </div>
             </div>
-            <header>
+            <header className="sticky top-0 z-[999] w-full">
                 {/* =================================================
                     HEADER BAR
                 ================================================= */}
 
                 <div
-                    className={`relative pt-[15px] pb-[10px] px-[7.5px] min-[1400px]:py-[16px]  min-[1400px]:px-[31px] flex justify-between  border-b border-[rgba(25,25,26,0.3)] backdrop-blur-[4px] fixed-top ${menuOpen ? "bg-[rgb(0,0,0)]" : "bg-[rgba(0,0,0)]"}`}
+                    className={`relative w-full pt-[15px] pb-[10px] px-[7.5px] min-[1400px]:py-[16px] min-[1400px]:px-[31px] flex justify-between border-b border-[rgba(25,25,26,0.3)] bg-black backdrop-blur-[4px] ${menuOpen ? "shadow-lg" : ""}`}
                 >
                     {/* =================================================
                         LOGO
@@ -617,7 +622,7 @@ const Header = () => {
                     MOBILE MENU
                 ========================================================= */}
 
-                <div className={`md:hidden fixed w-full top-[60px] left-0 z-[99] overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+                <div className={`md:hidden fixed w-full top-[60px] left-0 z-[998] overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
                 >
                     <div className="bg-black">
                         {menu.map((group, index) => {

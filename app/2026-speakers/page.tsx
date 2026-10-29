@@ -57,10 +57,11 @@ export const metadata: Metadata = {
 
 export default async function Speakers2026() {
     const delegate_speakers = await getSpeakers(2026, 100, "delegate-speaker");
+    //console.log(delegate_speakers);
     const sponsor_speakers = await getSpeakers(2026, 100, "sponsor-speaker");
     return (
         <>
-            <div className="page-content">
+            <div className="page-content pt-[120px]">
                 <section className="bg-style4 relative overflow-hidden">
                     <div className="relative z-10 max-w-7xl mx-auto w-full px-[20px]">
                         <div className="flex flex-col justify-end items-center gap-[30px] py-[60px]">
@@ -68,6 +69,7 @@ export default async function Speakers2026() {
                         </div>
                     </div>
                 </section>
+                {/* VIP Speakers */}
                 <section className="speakers-section relative overflow-hidden py-[60px] pt-0">
                     <div className="mx-auto w-full relative z-10 px-5">
                         <div className="flex flex-col items-center gap-[40px]">
@@ -76,7 +78,7 @@ export default async function Speakers2026() {
                         </div>
                     </div>
                 </section>
-
+                {/* Delegate Speakers */}
                 <section className="speakers-section relative overflow-hidden py-[60px]">
                     <div className="mx-auto w-full relative z-10 px-5">
                         <div className="flex flex-col items-center gap-[40px]">
@@ -85,13 +87,14 @@ export default async function Speakers2026() {
                                 {delegate_speakers.map((speaker: any, index: number) => {
                                     const fullName = speaker?.title?.rendered?.trim() || "";
                                     return (
-                                        <div className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
+                                        <div key={index} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(20%-14px)]">
                                             <SingleSpeaker key={index}
                                                 name={fullName}
                                                 designation={speaker?.acf?.designation}
                                                 company={speaker?.acf?.company}
                                                 imageId={speaker?.acf?.speaker_image}
                                                 linkedinUrl={speaker?.acf?.linkedin_url}
+                                                id={speaker?.id}
                                             />
                                         </div>
                                     );
@@ -100,7 +103,7 @@ export default async function Speakers2026() {
                         </div>
                     </div>
                 </section>
-
+                {/* Sponsor Speakers */}
                 <section className="speakers-section relative overflow-hidden py-[60px]">
                     <div className="mx-auto w-full relative z-10 px-5">
                         <div className="flex flex-col items-center gap-[40px]">
@@ -109,7 +112,7 @@ export default async function Speakers2026() {
                                 {sponsor_speakers.map((speaker: any, index: number) => {
                                     const fullName = speaker?.title?.rendered?.trim() || "";
                                     return (
-                                        <div className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
+                                        <div key={index} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(20%-14px)]">
                                             <SingleSpeaker key={index}
                                                 name={fullName}
                                                 designation={speaker?.acf?.designation}
@@ -124,7 +127,6 @@ export default async function Speakers2026() {
                         </div>
                     </div>
                 </section>
-
             </div>
         </>
     )

@@ -3,7 +3,7 @@ import SponsorsImg from "@/components/ui/SponsorsImg";
 const UISponsor = ({ sponsorData }: any) => {
 
     return (
-        <section className="sponsors-section relative pb-[40px] py-[80px]">
+        <section className="sponsors-section relative pt-[0] py-[80px]">
             <div className="mx-auto w-full max-w-[1320px] flex flex-col gap-[40px] px-[20px]">
 
                 {sponsorData?.map((sponsor: any, index: number) => {

@@ -30,10 +30,11 @@ const PastSpeaker = ({ pastspeakerdata }: PastSpeakerProps) => {
             <div className="overflow-hidden w-full mx-auto">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={20}
+                    spaceBetween={14}
                     loop={true}
                     navigation={false}
                     autoplay={{ delay: 3000 }}
+                    //autoplay={false}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     slidesPerView={5}
                     breakpoints={{
@@ -60,6 +61,7 @@ const PastSpeaker = ({ pastspeakerdata }: PastSpeakerProps) => {
                                         company={speaker?.acf?.company}
                                         imageId={speaker?.acf?.speaker_image}
                                         linkedinUrl={speaker?.acf?.linkedin_url}
+                                        id={speaker?.id}
                                     />
                                 </div>
                             </SwiperSlide>

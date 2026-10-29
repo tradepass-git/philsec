@@ -59,7 +59,7 @@ export default async function Speakers2024() {
     const speakers = await getSpeakers(2024);
     return (
         <>
-            <div className="page-content">
+            <div className="page-content pt-[120px]">
                 <section className="bg-style4 relative overflow-hidden">
                     <div className="relative z-10 max-w-7xl mx-auto w-full px-[20px]">
                         <div className="flex flex-col justify-end items-center gap-[30px] py-[60px]">
@@ -74,7 +74,7 @@ export default async function Speakers2024() {
                                 {speakers.map((speaker: any, index: number) => {
                                     const fullName = speaker?.title?.rendered?.trim() || "";
                                     return (
-                                        <div className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(16.666%-14px)]">
+                                        <div key={index} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] 2xl:w-[calc(20%-14px)]">
 
                                             <SingleSpeaker key={index}
                                                 name={fullName}

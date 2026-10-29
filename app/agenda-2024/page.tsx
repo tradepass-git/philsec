@@ -1,0 +1,80 @@
+import type { Metadata } from "next";
+import { getAgendaByID } from "@/lib/wordpress/agenda";
+import Tabs from "@/components/ui/tabs";
+
+export const metadata: Metadata = {
+  title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+
+  description:
+    "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+
+  alternates: {
+    canonical: "https://malaysia.dccisummit.com/agenda-2026/",
+  },
+
+  openGraph: {
+    title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+
+    description:
+      "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+
+    url: "https://malaysia.dccisummit.com/agenda-2026/",
+
+    siteName: "DCCI Malaysia",
+
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DCCI Malaysia Agenda 2026",
+      },
+    ],
+
+    locale: "en_MY",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+
+    description:
+      "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+
+    images: ["/images/og-image.png"],
+
+    creator: "@tradepass",
+    site: "@tradepass",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const page = async () => {
+  const agenda = await getAgendaByID(9193);
+  return (
+    <div className="page-content bg-white pt-[120px]">
+      <section className="bg-style4 relative overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-[20px]">
+          <div className="flex flex-col justify-end items-center gap-[30px] py-[60px]">
+            <h1 className="font-oswald text-center text-[clamp(1.2rem,4vw,2.53rem)] font-bold uppercase leading-[1.2]  text-black">2024 Agenda</h1>
+            <div className="bg-[var(--main-color)] w-[150px] h-[3px] hidden"></div>
+          </div>
+        </div>
+      </section>
+      <section className="py-[80px] pt-0 relative">
+        <div className="relative z-10 max-w-[85rem] mx-auto w-full px-[20px]">
+          <Tabs agenda={agenda.acf?.tabs} year="2024" />
+          <div className='text-[1rem] agenda-text text-black font-montserrat mt-[40px]'>*The above is a running agenda and is subject to change</div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default page

@@ -370,3 +370,32 @@
   background-clip: text;
 
 }
+
+
+body.awards-gala .page-content {
+  background-image: url(/images/gala-agenda-bg.jpg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #06000c;
+}
+
+body.awards-gala .page-content h1 {
+  color: white;
+}
+
+body.awards-gala .page-content .button-wrap {
+  border-color: var(--secondary-color);
+}
+
+body.awards-gala .page-content .nonactive {
+  color: var(--secondary-color);
+}
+
+body.awards-gala .inner-banner-img {
+  opacity: 0;
+}
+
+body.awards-gala .agenda-text {
+  color: white;
+}

@@ -23,7 +23,7 @@ const Tabs = ({ agenda, year }: any) => {
      * Add/remove Awards body class
      */
     useEffect(() => {
-        if (activeTab === "Awards-Agenda") {
+        if (activeTab === "Day 2 Awards & Gala Dinner") {
             document.body.classList.add("awards-gala");
         } else {
             document.body.classList.remove("awards-gala");
@@ -85,7 +85,7 @@ const Tabs = ({ agenda, year }: any) => {
      * Reusable tab buttons
      */
     const renderTabs = () => (
-        <div className="w-fit flex items-center justify-center border border-black p-[5px] rounded-[10px]">
+        <div className="button-wrap w-fit flex items-center justify-center border border-black p-[5px] rounded-[10px]">
             {tabs.map((tab: any) => (
                 <button
                     key={tab}
@@ -93,7 +93,7 @@ const Tabs = ({ agenda, year }: any) => {
                     onClick={() => handleTabChange(tab)}
                     className={`uppercase px-[20px] py-[7px] font-bold cursor-pointer ${activeTab === tab
                         ? "bg-[var(--secondary-color)] rounded-[10px] text-black"
-                        : "text-black"
+                        : "text-black nonactive"
                         }`}
                 >
                     {tab}
@@ -122,7 +122,7 @@ const Tabs = ({ agenda, year }: any) => {
                 {/* =========================
                     AWARDS AGENDA
                 ========================= */}
-                {activeTab === "Awards-Agenda" ? (
+                {activeTab === "Day 2 Awards & Gala Dinner" ? (
                     <div className="relative">
                         {filteredAgenda.map(
                             (item: any, index: number) => (
@@ -151,13 +151,13 @@ const Tabs = ({ agenda, year }: any) => {
                                                         <div className="flex h-full flex-col justify-center gap-[10px] md:px-[40px]">
                                                             <div className="font-montserrat text-[1rem] font-bold leading-[1] text-white">
                                                                 {
-                                                                    session.start_time
+                                                                    session.time
                                                                 }
                                                             </div>
 
                                                             <div className="font-montserrat text-[1.2rem] font-bold leading-[1.2] text-white">
                                                                 {
-                                                                    session.title
+                                                                    session.heading
                                                                 }
                                                             </div>
                                                         </div>
@@ -178,13 +178,13 @@ const Tabs = ({ agenda, year }: any) => {
                                                         <div className="absolute flex h-full w-full flex-col gap-[10px] p-[20px] md:p-[40px]">
                                                             <div className="font-montserrat text-[1rem] font-bold leading-[1] text-white">
                                                                 {
-                                                                    session.start_time
+                                                                    session.time
                                                                 }
                                                             </div>
 
                                                             <div className="font-montserrat text-[1.2rem] font-bold leading-[1.2] text-white">
                                                                 {
-                                                                    session.title
+                                                                    session.heading
                                                                 }
                                                             </div>
                                                         </div>
@@ -336,7 +336,7 @@ const Tabs = ({ agenda, year }: any) => {
                                                                                         )}
                                                                                         className={`relative flex w-full flex-col gap-[10px] sm:w-[45%] lg:w-[31%] ${year ==
                                                                                             2024
-                                                                                            ? "min-h-[270px]"
+                                                                                            ? "min-h-[160px]"
                                                                                             : "min-h-[160px]"
                                                                                             } before:absolute before:top-[20%] before:z-1 before:h-[80%] before:w-full before:rounded-[10px] before:border before:border-[#0e0e0e29] before:content-['']`}
                                                                                     >
@@ -347,7 +347,7 @@ const Tabs = ({ agenda, year }: any) => {
                                                                                                 <div
                                                                                                     className={`absolute left-[90px] font-montserrat text-[0.9rem] font-bold uppercase text-[#e22013] ${year ==
                                                                                                         2024
-                                                                                                        ? "top-[20px]"
+                                                                                                        ? "top-[5px]"
                                                                                                         : "top-[5px]"
                                                                                                         }`}
                                                                                                 >

@@ -41,8 +41,8 @@ const hero = () => {
     const [hubspotId, setHubspotId] = useState<string>("");
     return (
         <>
-            <section className="relative w-full h-screen bg-black flex flex-col justify-between overflow-hidden">
-                <div className="hero-video relative w-full h-[60vh]">
+            <section className="relative w-full h-screen bg-black flex flex-col justify-center overflow-hidden gap-[30px] min-[1800px]:gap-0">
+                <div className="hero-video relative w-full min-[1800px]:h-[60vh] h-[70vh]">
                     <video
                         muted
                         autoPlay
@@ -53,7 +53,7 @@ const hero = () => {
                     >
                         <source src="/video/hero.mp4" type="video/mp4" />
                     </video>
-                    <div className="relative flex flex-col h-full w-full justify-center gap-[30px] z-10">
+                    <div className="relative flex flex-col h-full w-full min-[1800px]:justify-center justify-end gap-[30px] z-10">
                         <div className="relative w-full h-[clamp(110px,18vw,120px)] min-[1400]:!h-[200px]">
                             <Image
                                 src="/images/philsec-logo.png"
@@ -87,7 +87,7 @@ const hero = () => {
 
                     </div>
                 </div>
-                <div className="glance-section relative overflow-hidden h-[38vh]">
+                <div className="glance-section relative overflow-hidden">
                     <div className="mx-auto w-[90%] min-[1800px]:w-[80%] min-[2200px]:w-[75%] relative z-10 py-[20px] px-[20px] border border-[#3f3f3f87] rounded-3xl">
                         <div className="grid grid-cols-12 justify-items-center gap-y-[20px]">
                             <div className="xl:col-span-1 col-span-12 flex items-center pl-[40px]">
