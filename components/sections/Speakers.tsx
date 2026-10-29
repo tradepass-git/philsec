@@ -22,7 +22,7 @@ const Speakers = async () => {
                     </div>
 
                     {/* Past Speakers */}
-                    <div id="speakers" className="mx-auto w-full relative z-10 px-5">
+                    <div id="speakers" className="mx-auto w-full relative z-10 px-[10px] lg:px-[60px]">
                         <PastSpeaker pastspeakerdata={past_speakers} />
                     </div>
 

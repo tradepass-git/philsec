@@ -50,7 +50,7 @@ const JudgingProcedure = () => {
                             <div className="mil-image-frame absolute overflow-hidden top-0 left-0 w-full h-full z-20">
                                 <Image
                                     src="/images/judging.jpg"
-                                    alt="DCCI Malaysia"
+                                    alt="PhilSec Awards"
                                     fill
                                     priority
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

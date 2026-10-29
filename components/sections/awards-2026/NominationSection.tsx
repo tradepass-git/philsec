@@ -31,7 +31,7 @@ const NominationSection = () => {
                                 onClick={handleOpenModal}
                             />
                             <Nomination
-                                text=">This award recognizes the most phenomenal technology professional
+                                text="This award recognizes the most phenomenal technology professional
                             who went all out with his/her contributions in planning and implementing the most secure
                             digital infrastructure. It also aims to applaud his/her avant-garde ideas that has set the
                             tone for future innovations in the category."

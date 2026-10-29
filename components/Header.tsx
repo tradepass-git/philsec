@@ -107,6 +107,10 @@ const menu: MenuGroup[] = [
                         name: "Sponsors",
                         href: "/2025-sponsors/",
                     },
+                    {
+                        name: "Awards",
+                        href: "/awards-2025/",
+                    },
                 ],
             },
 

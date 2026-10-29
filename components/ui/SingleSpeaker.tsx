@@ -48,7 +48,7 @@ const SingleSpeaker = ({
 
             <div className="flex h-[200px] w-full flex-col items-center justify-center gap-[10px] px-[10px] py-[30px]">
                 <h3
-                    className={`font-zuume text-center ${id == 8650 ? "text-[1.4rem]" : "text-[1.75rem]"} font-bold uppercase leading-[1] tracking-[1px] text-white`}
+                    className={`font-zuume text-center ${id == 8650 ? "text-[1.2rem] min-[1600px]:text-[1.3rem] min-[2000px]:text-[1.75rem]" : "text-[1.75rem]"} font-bold uppercase leading-[1] tracking-[1px] text-white`}
                     dangerouslySetInnerHTML={{ __html: name ?? "" }}
                 />
 
