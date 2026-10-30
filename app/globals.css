@@ -53,11 +53,12 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background-color: var(--black-color);
+  /*background: linear-gradient(270deg,#2e1d16,#0e1d30);*/
   color: var(--white-color);
 }
 
 /* Hide the NEAT label */
-canvas + a,
+canvas+a,
 a[href*="neat"] {
   display: none !important;
 }
@@ -79,8 +80,8 @@ a[href*="neat"] {
       #e3ff6587 100%);
 }
 
-.newsletter-section{
-  background: linear-gradient(2.48deg,#e3ff65,#84F9D9);
+.newsletter-section {
+  background: linear-gradient(2.48deg, #e3ff65, #84F9D9);
 }
 
 .footerBG {

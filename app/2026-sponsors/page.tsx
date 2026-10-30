@@ -3,31 +3,31 @@ import { getSponsors } from "@/lib/wordpress/sponsors";
 import UISponsor from "@/components/ui/Sponsors";
 
 export const metadata: Metadata = {
-  title: "DCCI Malaysia 2026 Sponsors: Cloud, AI & Data Center Leaders",
+  title: "PhilSec 2026 Sponsors - Technology Partners & Innovators",
 
   description:
-    "The DCCI Malaysia 2026 sponsor lineup features global leaders in digital infrastructure, cloud, AI, cybersecurity, and data center technologies.",
+    "Explore PhilSec 2026 sponsors, leading cybersecurity solution providers & industry partners advancing digital security, threat protection & security innovation",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/2026-sponsors/",
+    canonical: "https:///www.philsecsummit.com/2026-sponsors/",
   },
 
   openGraph: {
-    title: "DCCI Malaysia 2026 Sponsors: Cloud, AI & Data Center Leaders",
+    title: "PhilSec 2026 Sponsors - Technology Partners & Innovators",
 
     description:
-      "The DCCI Malaysia 2026 sponsor lineup features global leaders in digital infrastructure, cloud, AI, cybersecurity, and data center technologies.",
+      "Explore PhilSec 2026 sponsors, leading cybersecurity solution providers & industry partners advancing digital security, threat protection & security innovation",
 
-    url: "https://malaysia.dccisummit.com/2026-sponsors/",
+    url: "https:///www.philsecsummit.com/2026-sponsors/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Sponsors 2026",
+        alt: "PhilSec",
       },
     ],
 
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "DCCI Malaysia 2026 Sponsors: Cloud, AI & Data Center Leaders",
+    title: "PhilSec 2026 Sponsors - Technology Partners & Innovators",
 
     description:
-      "The DCCI Malaysia 2026 sponsor lineup features global leaders in digital infrastructure, cloud, AI, cybersecurity, and data center technologies.",
+      "Explore PhilSec 2026 sponsors, leading cybersecurity solution providers & industry partners advancing digital security, threat protection & security innovation",
 
     images: ["/images/og-image.png"],
 

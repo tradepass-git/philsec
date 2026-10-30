@@ -4,31 +4,31 @@ import UISponsor from "@/components/ui/Sponsors";
 
 
 export const metadata: Metadata = {
-  title: "DCCI Malaysia 2024 Sponsors: Top Datacenter & Cloud Players",
+  title: "PhilSec 2024 Sponsors - Cybersecurity Event Partners",
 
   description:
-    "The sponsor lineup at DCCI Malaysia 2024 addressed crucial gaps in data centers, cloud infrastructure, edge computing, cloud migration, data security & more.",
+    "View the PhilSec 2024 sponsors list, highlighting top cybersecurity organisations, partners, and innovators powering the leading cybersecurity summit.",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/2024-sponsors/",
+    canonical: "https://www.philsecsummit.com/2024-sponsors/",
   },
 
   openGraph: {
-    title: "DCCI Malaysia 2024 Sponsors: Top Datacenter & Cloud Players",
+    title: "PhilSec 2024 Sponsors - Cybersecurity Event Partners",
 
     description:
-      "The sponsor lineup at DCCI Malaysia 2024 addressed crucial gaps in data centers, cloud infrastructure, edge computing, cloud migration, data security & more.",
+      "View the PhilSec 2024 sponsors list, highlighting top cybersecurity organisations, partners, and innovators powering the leading cybersecurity summit.",
 
-    url: "https://malaysia.dccisummit.com/2024-sponsors/",
+    url: "https://www.philsecsummit.com/2024-sponsors/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Sponsors 2024",
+        alt: "PhilSec",
       },
     ],
 
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "DCCI Malaysia 2024 Sponsors: Top Datacenter & Cloud Players",
+    title: "PhilSec 2024 Sponsors - Cybersecurity Event Partners",
 
     description:
-      "The sponsor lineup at DCCI Malaysia 2024 addressed crucial gaps in data centers, cloud infrastructure, edge computing, cloud migration, data security & more.",
+      "View the PhilSec 2024 sponsors list, highlighting top cybersecurity organisations, partners, and innovators powering the leading cybersecurity summit.",
 
     images: ["/images/og-image.png"],
 

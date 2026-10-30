@@ -4,31 +4,31 @@ import UISponsor from "@/components/ui/Sponsors";
 
 
 export const metadata: Metadata = {
-    title: "DCCI Malaysia 2023 Sponsors: Top Regional & Global Giants",
+    title: "PhilSec 2023 Sponsors - Solution Providers & Partners",
 
     description:
-        "View DCCI Malaysia 2023 sponsor lineup that includes the leading experts from data centers, cloud services, cybersecurity, digital infrastructure & more.",
+        "Explore PhilSec 2023 sponsors and partners, including leading cybersecurity companies in cyber defence, threat intelligence & data protection.",
 
     alternates: {
-        canonical: "https://malaysia.dccisummit.com/2023-sponsors/",
+        canonical: "https://www.philsecsummit.com/2023-sponsors/",
     },
 
     openGraph: {
-        title: "DCCI Malaysia 2023 Sponsors: Top Regional & Global Giants",
+        title: "PhilSec 2023 Sponsors - Solution Providers & Partners",
 
         description:
-            "View DCCI Malaysia 2023 sponsor lineup that includes the leading experts from data centers, cloud services, cybersecurity, digital infrastructure & more.",
+            "Explore PhilSec 2023 sponsors and partners, including leading cybersecurity companies in cyber defence, threat intelligence & data protection.",
 
-        url: "https://malaysia.dccisummit.com/2023-sponsors/",
+        url: "https://www.philsecsummit.com/2023-sponsors/",
 
-        siteName: "DCCI Malaysia",
+        siteName: "PhilSec",
 
         images: [
             {
                 url: "/images/og-image.png",
                 width: 1200,
                 height: 630,
-                alt: "DCCI Malaysia Sponsors 2023",
+                alt: "PhilSec",
             },
         ],
 
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
 
-        title: "DCCI Malaysia 2023 Sponsors: Top Regional & Global Giants",
+        title: "PhilSec 2023 Sponsors - Solution Providers & Partners",
 
         description:
-            "View DCCI Malaysia 2023 sponsor lineup that includes the leading experts from data centers, cloud services, cybersecurity, digital infrastructure & more.",
+            "Explore PhilSec 2023 sponsors and partners, including leading cybersecurity companies in cyber defence, threat intelligence & data protection.",
 
         images: ["/images/og-image.png"],
 

@@ -15,10 +15,10 @@ const FooterNew = () => {
                         <div className="xl:col-span-3 flex flex-col gap-[20px]">
                             <h3 className="font-bold text-white">About Tradepass</h3>
                             <p className="flex flex-col gap-[10px]">
-                                <a href="" target="_blank" className="hover:text-[var(--secondary-color)]">About Us</a>
-                                <a href="" target="_blank" className="hover:text-[var(--secondary-color)]">Events</a>
-                                <a href="" target="_blank" className="hover:text-[var(--secondary-color)]">Contact Us</a>
-                                <a href="" target="_blank" className="hover:text-[var(--secondary-color)]">Blogs</a>
+                                <a href="https://tradepassglobal.com/about-us/" target="_blank" className="hover:text-[var(--secondary-color)]">About Us</a>
+                                <a href="https://tradepassglobal.com/events/" target="_blank" className="hover:text-[var(--secondary-color)]">Events</a>
+                                <a href="https://tradepassglobal.com/contact-us/" target="_blank" className="hover:text-[var(--secondary-color)]">Contact Us</a>
+                                <a href="/blogs/" className="hover:text-[var(--secondary-color)]">Blogs</a>
                             </p>
                         </div>
                         <div className="xl:col-span-3 flex flex-col gap-[20px]">

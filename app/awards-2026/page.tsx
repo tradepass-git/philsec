@@ -17,31 +17,31 @@ import AwardsAnimations from "@/components/sections/awards-2026/AwardsAnimations
 
 
 export const metadata: Metadata = {
-  title: "DCCI Malaysia Awards 2026 : Digital Infrastructure&#039;s Very Best",
+  title: "PhilSec Awards 2026 - Honouring Cybersecurity Excellence",
 
   description:
-    "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+    "Celebrate the Philippines’ leading cybersecurity minds at the PhilSec Awards 2026, recognising achievements, innovation & excellence in cybersecurity",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/awards-2026/",
+    canonical: "https://www.philsecsummit.com/awards-2026/",
   },
 
   openGraph: {
-    title: "DCCI Malaysia Awards 2026 : Digital Infrastructure&#039;s Very Best",
+    title: "PhilSec Awards 2026 - Honouring Cybersecurity Excellence",
 
     description:
-      "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+      "Celebrate the Philippines’ leading cybersecurity minds at the PhilSec Awards 2026, recognising achievements, innovation & excellence in cybersecurity",
 
-    url: "https://malaysia.dccisummit.com/awards-2026/",
+    url: "https://www.philsecsummit.com/awards-2026/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Awards 2026",
+        alt: "PhilSec",
       },
     ],
 
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "DCCI Malaysia Awards 2026 : Digital Infrastructure&#039;s Very Best",
+    title: "PhilSec Awards 2026 - Honouring Cybersecurity Excellence",
 
     description:
-      "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+      "Celebrate the Philippines’ leading cybersecurity minds at the PhilSec Awards 2026, recognising achievements, innovation & excellence in cybersecurity",
 
     images: ["/images/og-image.png"],
 

@@ -16,7 +16,7 @@ export async function getPosts(
     const safePage = Math.max(page, 1);
 
     return wpFetchWithPagination<WPPost[]>(
-        `posts?conference_event=22&per_page=${safePerPage}&page=${safePage}&_embed`,
+        `posts?conference_event=39&per_page=${safePerPage}&page=${safePage}&_embed`,
         {
             cache: "no-store",
         }

@@ -28,11 +28,11 @@ const SeriesPartner = () => {
                 <div className='
                 relative flex
 before:absolute before:block before:content-[""] before:w-[60px] before:h-full
-before:bg-[linear-gradient(90deg,_#000000_20%,_transparent_100%)]
+before:bg-[linear-gradient(90deg,_#0e1d30_20%,_transparent_100%)]
 before:top-0 before:left-0 before:z-10
 
 after:absolute after:block after:content-[""] after:w-[60px] after:h-full
-after:bg-[linear-gradient(270deg,_#000000_20%,_transparent_100%)]
+after:bg-[linear-gradient(270deg,_#2e1d16_20%,_transparent_100%)]
 after:top-0 after:right-0 after:z-10
                 '>
                     <Swiper

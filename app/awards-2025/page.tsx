@@ -17,31 +17,31 @@ import AwardsAnimations from "@/components/sections/awards-2025/AwardsAnimations
 
 
 export const metadata: Metadata = {
-  title: "DCCI Malaysia Awards 2025 : Digital Infrastructure&#039;s Very Best",
+  title: "PhilSec 2025 Awards - Recognizing Cybersecurity Achievements",
 
   description:
-    "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+    "Explore the PhilSec 2025 Awards page highlighting Jury members and award categories in cybersecurity excellence from public & private sectors",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/awards-2025/",
+    canonical: "https://www.philsecsummit.com/awards-2025/",
   },
 
   openGraph: {
-    title: "DCCI Malaysia Awards 2025 : Digital Infrastructure&#039;s Very Best",
+    title: "PhilSec 2025 Awards - Recognizing Cybersecurity Achievements",
 
     description:
-      "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+      "Explore the PhilSec 2025 Awards page highlighting Jury members and award categories in cybersecurity excellence from public & private sectors",
 
-    url: "https://malaysia.dccisummit.com/awards-2025/",
+    url: "https://www.philsecsummit.com/awards-2025/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Awards 2025",
+        alt: "PhilSec",
       },
     ],
 
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "DCCI Malaysia Awards 2025 : Digital Infrastructure&#039;s Very Best",
+    title: "PhilSec 2025 Awards - Recognizing Cybersecurity Achievements",
 
     description:
-      "Recognizing the top minds across data centers, cloud services, digital transformation and crucial digital infrastructure domains amidst the most elite audience.",
+      "Explore the PhilSec 2025 Awards page highlighting Jury members and award categories in cybersecurity excellence from public & private sectors",
 
     images: ["/images/og-image.png"],
 

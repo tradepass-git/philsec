@@ -3,31 +3,31 @@ import { getSponsors } from "@/lib/wordpress/sponsors";
 import UISponsor from "@/components/ui/Sponsors";
 
 export const metadata: Metadata = {
-  title: "DCCI Malaysia 2025 Sponsors: Experts in data centers & cloud",
+  title: "PhilSec 2025 Sponsors - Industry leading Partners",
 
   description:
-    "Check out our stellar lineup of sponsors from 2025 that included top experts from digital infrastructure, cloud optimization, cybersecurity, automation & more.",
+    "Explore the official sponsor lineup of PhilSec 2025, featuring supporting partners, exhibitors, industry leaders and supporting organisations in cybersecurity.",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/2025-sponsors/",
+    canonical: "https://www.philsecsummit.com/2025-sponsors/",
   },
 
   openGraph: {
-    title: "DCCI Malaysia 2025 Sponsors: Experts in data centers & cloud",
+    title: "PhilSec 2025 Sponsors - Industry leading Partners",
 
     description:
-      "Check out our stellar lineup of sponsors from 2025 that included top experts from digital infrastructure, cloud optimization, cybersecurity, automation & more.",
+      "Explore the official sponsor lineup of PhilSec 2025, featuring supporting partners, exhibitors, industry leaders and supporting organisations in cybersecurity.",
 
-    url: "https://malaysia.dccisummit.com/2025-sponsors/",
+    url: "https://www.philsecsummit.com/2025-sponsors/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Sponsors 2025",
+        alt: "PhilSec",
       },
     ],
 
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "DCCI Malaysia 2025 Sponsors: Experts in data centers & cloud",
+    title: "PhilSec 2025 Sponsors - Industry leading Partners",
 
     description:
-      "Check out our stellar lineup of sponsors from 2025 that included top experts from digital infrastructure, cloud optimization, cybersecurity, automation & more.",
+      "Explore the official sponsor lineup of PhilSec 2025, featuring supporting partners, exhibitors, industry leaders and supporting organisations in cybersecurity.",
 
     images: ["/images/og-image.png"],
 

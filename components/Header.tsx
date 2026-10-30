@@ -48,6 +48,12 @@ const menu: MenuGroup[] = [
     },
 
     {
+        category: "Agenda",
+        href: "/agenda/",
+        items: [],
+    },
+
+    {
         category: "Awards",
         href: "/awards/",
         items: [],
@@ -311,7 +317,7 @@ const Header = () => {
 
         return () => clearTimeout(timer);
     }, [pathname]);
-    
+
 
     /* =====================================================
        RETURN
@@ -342,7 +348,7 @@ const Header = () => {
                     <div className="flex gap-[30px] items-center">
                         <a
                             href="/"
-                            id="malaysia-home-nav"
+                            id="philsec-home-nav"
                             className="relative z-[1000]"
                         >
                             <Image
@@ -591,7 +597,7 @@ const Header = () => {
                     <div className="hidden min-[1200px]:flex items-center gap-2.5">
                         <a
                             href="javascript:void(0)"
-                            id="malaysia-sponsor-nav"
+                            id="philsec-sponsor-nav"
                             onClick={() =>
                                 openEnquiryModal(
                                     "Sponsor Enquiry",
@@ -600,13 +606,13 @@ const Header = () => {
                             }
                             className={`${CustomClass.ctaButton}`}
                         >
-                           {/* <svg><use href="/images/icons.svg#plus"></use></svg> */} 
+                            {/* <svg><use href="/images/icons.svg#plus"></use></svg> */}
                             <span><span>Sponsor Enquiry</span><span>Sponsor Enquiry</span></span>
                         </a>
 
                         <a
                             href="javascript:void(0)"
-                            id="malaysia-delegate-nav"
+                            id="philsec-delegate-nav"
                             onClick={() =>
                                 openEnquiryModal(
                                     "Delegate Enquiry",
@@ -615,7 +621,7 @@ const Header = () => {
                             }
                             className={`${CustomClass.ctaButton}`}
                         >
-                             {/* <svg><use href="/images/icons.svg#plus"></use></svg> */} 
+                            {/* <svg><use href="/images/icons.svg#plus"></use></svg> */}
                             <span><span>Delegate Enquiry</span><span>Delegate Enquiry</span></span>
 
                         </a>

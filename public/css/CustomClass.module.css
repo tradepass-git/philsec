@@ -215,6 +215,38 @@
 }
 
 
+
+.post-content p,
+.post-content h2,
+.post-content h3,
+.post-content ul li,
+.post-content figure,
+.post-content ol {
+    margin-bottom: 1rem;
+
+}
+
+.post-content ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.post-content ol {
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+.post-content h2{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 140%;
+}
+
+.post-content h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 140%;
+}
+
+
 @media only screen and (min-width: 768px) {
 
     .why-section.sponsor-section :global(.form-columns-2) {

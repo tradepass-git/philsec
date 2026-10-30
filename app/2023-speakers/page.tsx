@@ -3,31 +3,31 @@ import { getSpeakers } from "@/lib/wordpress/speakers";
 import SingleSpeaker from "@/components/ui/SingleSpeaker";
 
 export const metadata: Metadata = {
-    title: "DCCI Malaysia 2023 Speakers: Top data center & cloud voices",
+    title: "PhilSec 2023 Speakers - Cybersecurity Experts & CISOs",
 
     description:
-        "Explore DCCI Malaysia 2023's most influential thought leaders from cloud infrastructure, edge data centers, cybersecurity, AI, green data centers and more.",
+        "Discover PhilSec 2023 speakers from leading organisations, including cybersecurity experts, CISOs & technology executives shaping cybersecurity in Philippines",
 
     alternates: {
-        canonical: "https://malaysia.dccisummit.com/2023-speakers/",
+        canonical: "https:///www.philsecsummit.com/2023-speakers/",
     },
 
     openGraph: {
-        title: "DCCI Malaysia 2023 Speakers: Top data center & cloud voices",
+        title: "PhilSec 2023 Speakers - Cybersecurity Experts & CISOs",
 
         description:
-            "Explore DCCI Malaysia 2023's most influential thought leaders from cloud infrastructure, edge data centers, cybersecurity, AI, green data centers and more.",
+            "Discover PhilSec 2023 speakers from leading organisations, including cybersecurity experts, CISOs & technology executives shaping cybersecurity in Philippines",
 
-        url: "https://malaysia.dccisummit.com/2023-speakers/",
+        url: "https:///www.philsecsummit.com/2023-speakers/",
 
-        siteName: "DCCI Malaysia",
+        siteName: "PhilSec",
 
         images: [
             {
                 url: "/images/og-image.png",
                 width: 1200,
                 height: 630,
-                alt: "DCCI Malaysia Speakers 2023",
+                alt: "PhilSec",
             },
         ],
 
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
 
-        title: "DCCI Malaysia 2023 Speakers: Top data center & cloud voices",
+        title: "PhilSec 2023 Speakers - Cybersecurity Experts & CISOs",
 
         description:
-            "Explore DCCI Malaysia 2023's most influential thought leaders from cloud infrastructure, edge data centers, cybersecurity, AI, green data centers and more.",
+            "Discover PhilSec 2023 speakers from leading organisations, including cybersecurity experts, CISOs & technology executives shaping cybersecurity in Philippines",
 
         images: ["/images/og-image.png"],
 

@@ -3,31 +3,31 @@ import { getAgendaByID } from "@/lib/wordpress/agenda";
 import Tabs from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
-  title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+  title: "PhilSec 2025 -  Official Agenda & Session Highlights",
 
   description:
-    "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+    "Check out the full agenda of PhilSec 2025, featuring sessions on cyber defense trends, cloud security, AI in cybersecurity, and national data protection.",
 
   alternates: {
-    canonical: "https://malaysia.dccisummit.com/agenda-2026/",
+    canonical: "https://www.philsecsummit.com/agenda-2025/",
   },
 
   openGraph: {
-    title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+    title: "PhilSec 2025 -  Official Agenda & Session Highlights",
 
     description:
-      "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+      "Check out the full agenda of PhilSec 2025, featuring sessions on cyber defense trends, cloud security, AI in cybersecurity, and national data protection.",
 
-    url: "https://malaysia.dccisummit.com/agenda-2026/",
+    url: "https://www.philsecsummit.com/agenda-2025/",
 
-    siteName: "DCCI Malaysia",
+    siteName: "PhilSec",
 
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "DCCI Malaysia Agenda 2026",
+        alt: "PhilSec",
       },
     ],
 
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Agenda 2026: Explore DCCI Malaysia's Key Topics & Speakers",
+    title: "PhilSec 2025 -  Official Agenda & Session Highlights",
 
     description:
-      "The 2026 agenda uncovers the most crucial topics under hyperscale data centers, cloud infrastructure, automation and AI adoption, digital transformation & more.",
+      "Check out the full agenda of PhilSec 2025, featuring sessions on cyber defense trends, cloud security, AI in cybersecurity, and national data protection.",
 
     images: ["/images/og-image.png"],
 
